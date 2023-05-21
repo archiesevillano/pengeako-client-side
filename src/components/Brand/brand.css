@@ -1,0 +1,66 @@
+.brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-text {
+    font-family: var(--title);
+    color: var(--text);
+    font-size: 35px;
+    margin: 0;
+}
+
+.brand p {
+    font-family: var(--caption);
+    color: var(--tertiary);
+}
+
+.brand hr {
+    width: 100%;
+    margin-bottom: 2px;
+    border: 1px solid var(--tertiary);
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.leRotateIn span {
+    animation-name: leRotateIn
+}
+
+@keyframes leRotateIn {
+    from {
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.cssanimation,
+.cssanimation span {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.cssanimation span {
+    display: inline-block
+}
+
+.leFadeInLeft span {
+    animation-name: leFadeInLeft
+}
+
+@keyframes leFadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-60px);
+    }
+
+    to {
+        opacity: 1
+    }
+}

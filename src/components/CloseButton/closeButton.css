@@ -1,0 +1,25 @@
+.x-btn {
+    background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: rgb(187, 98, 98);
+    font-size: 30px;
+    background-color: var(--primary);
+    padding: 5px 7px;
+    border-radius: 50%;
+}
+
+.x-btn i {
+    transition: all 0.2s ease-in-out;
+}
+
+.x-btn i:hover {
+    filter: brightness(120%);
+}
+
+.x-btn i:active {
+    filter: brightness(80%);
+}

@@ -1,0 +1,26 @@
+.app-button {
+    padding: 10px 15px;
+    outline: none;
+    cursor: pointer;
+    font-family: var(--button);
+    background-color: var(--last);
+    color: var(--text);
+    transition: all 0.1s ease-in-out;
+    border: none;
+    width: 150px;
+    border-radius: 5px;
+
+}
+
+.app-button:hover {
+    filter: brightness(150%);
+}
+
+.app-button:active {
+    filter: brightness(90%);
+}
+
+.app-button i {
+    display: inline-block;
+    transform: translateX(-10px);
+}

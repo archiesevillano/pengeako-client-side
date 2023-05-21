@@ -1,13 +1,42 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Unica+One&display=swap');
+
+
+/* 
+font-family: 'Manrope', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Unica One', cursive;
+*/
+
+:root {
+  /* Fonts */
+  --input: 'Quicksand', sans-serif;
+  --title: 'Unica One', cursive;
+  --button: 'Open Sans', sans-serif;
+  --category: 'Manrope', sans-serif;
+  --caption: 'Roboto Slab', serif;
+
+  /* Colors */
+  --primary: #541A2E;
+  --secondary: #B51A2B;
+  --tertiary: #FFA586;
+  --quaternary: #384358;
+  --quinary: #242F49;
+  --last: #161E2F;
+  --body: #131212;
+  /* Text Default Colors */
+  --text: rgb(238, 238, 238);
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #131212;
+  width: 100vw;
+  height: 100%;
 }

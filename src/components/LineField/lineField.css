@@ -1,0 +1,109 @@
+.line-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--input);
+    color: var(--text);
+    width: 300px;
+    gap: 6px;
+    position: relative;
+}
+
+.input-line-field {
+    outline: none;
+    background: none;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    background: none;
+    font-size: 15px;
+    width: 100%;
+    padding: 0 33px;
+    padding-left: 33px;
+}
+
+.input-line-field:focus~.field-label {
+    top: -18px;
+    font-size: 12px;
+    color: var(--tertiary);
+}
+
+.input-line-field:focus~.fieldLine .filling {
+    transform: scalex(1);
+}
+
+.input-line-field:not(:placeholder-shown)~.field-label {
+    top: -18px;
+    font-size: 12px;
+    color: var(--tertiary);
+}
+
+.input-line-field::placeholder {
+    opacity: 0;
+}
+
+.fieldLine {
+    background-color: #3333338c;
+    height: 2px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filling {
+    width: 100%;
+    background-color: var(--tertiary);
+    height: 100%;
+    position: absolute;
+    transform: scaleX(0);
+    border-radius: 10px;
+    filter: brightness(110%);
+    transition: all 0.3s ease-in-out;
+}
+
+.field-label {
+    position: absolute;
+    top: -2px;
+    left: 33px;
+    transition: all 0.2s ease-in-out;
+    cursor: text;
+    color: var(--text);
+    user-select: none;
+}
+
+.input-line-field:not(:placeholder-shown)~.fieldLine {
+    background-color: #333;
+}
+
+#icon {
+    display: flex;
+    position: absolute;
+    left: 10px;
+    top: 1px;
+    color: var(--text);
+    transition: all 0.5s ease-in-out;
+}
+
+.input-line-field:focus~#icon {
+    color: var(--tertiary);
+}
+
+.show-hide-password-btn {
+    position: absolute;
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    color: var(--tertiary);
+    opacity: 0;
+    top: 2px;
+    right: 0;
+}
+
+.input-line-field:not(:placeholder-shown)~.show-hide-password-btn {
+    opacity: 0.7;
+}
