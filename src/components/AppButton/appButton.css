@@ -4,12 +4,11 @@
     cursor: pointer;
     font-family: var(--button);
     background-color: var(--last);
-    color: var(--text);
+    color: var(--tertiary);
     transition: all 0.1s ease-in-out;
     border: none;
     width: 150px;
     border-radius: 5px;
-
 }
 
 .app-button:hover {

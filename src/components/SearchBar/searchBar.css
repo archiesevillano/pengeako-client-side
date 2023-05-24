@@ -1,0 +1,48 @@
+.search-bar-container {
+    background: var(--text);
+    font-family: var(--input);
+    display: flex;
+    align-items: center;
+    cursor: text;
+    transition: all 0.2s ease-in-out;
+    padding: 10px;
+    position: relative;
+    margin: 15px 0;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.search-bar-container .search-bar {
+    background: none;
+    outline: none;
+    border: none;
+    font-family: inherit;
+    font-size: 18px;
+    width: 87%;
+}
+
+.fa-solid.fa-magnifying-glass {
+    display: inline-block;
+    position: absolute;
+    left: 16px;
+    top: 14px;
+    opacity: 0.5;
+    cursor: default;
+}
+
+.fa-solid.fa-xmark {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+.search-bar-container .search-bar:not(:placeholder-shown)~.fa-solid.fa-xmark {
+    opacity: 0.5;
+}

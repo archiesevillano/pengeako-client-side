@@ -1,4 +1,4 @@
-.signin {
+.signup {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -8,7 +8,7 @@
     overflow: hidden;
 }
 
-.col1 {
+.signup .col1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,14 +16,14 @@
     width: 50%;
 }
 
-.col1,
-.col2 {
+.signup .col1,
+.signup .col2 {
     height: 100vh;
     justify-content: center;
     align-items: center;
 }
 
-.col2 {
+.signup .col2 {
     position: relative;
     background: var(--body);
     width: 35%;
@@ -32,7 +32,7 @@
     transform: scale(1.2) rotate(-15deg); */
 }
 
-.col2 img {
+.signup .col2 img {
     position: absolute;
     box-shadow:
         0px 2.3px 2.2px rgba(0, 0, 0, 0.02),
@@ -43,7 +43,7 @@
         0px 84px 80px rgba(0, 0, 0, 0.07);
 }
 
-.showcase1 {
+.signup .showcase1 {
     width: 240px;
     height: 350px;
     object-fit: contain;
@@ -55,7 +55,7 @@
     transform: scale(0.8);
 }
 
-.showcase2 {
+.signup .showcase2 {
     width: 240px;
     height: 350px;
     object-fit: contain;
@@ -67,7 +67,7 @@
 
 }
 
-.showcase3 {
+.signup .showcase3 {
     width: 240px;
     height: 350px;
     object-fit: contain;
@@ -79,7 +79,7 @@
     transform: scale(0.8);
 }
 
-.showcase4 {
+.signup .showcase4 {
     width: 240px;
     height: 350px;
     object-fit: contain;
@@ -91,7 +91,7 @@
     transform: scale(0.6);
 }
 
-.bgshowcase {
+.signup .bgshowcase {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -100,7 +100,7 @@
     filter: blur(5px);
 }
 
-.signin-form {
+.signup .signup-form {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -112,7 +112,7 @@
     position: relative;
 }
 
-.signin-form::after {
+.signup .signup-form::after {
     position: absolute;
     top: -210px;
     left: 0;
@@ -123,7 +123,7 @@
     border-radius: 10px;
 }
 
-h3 {
+.signup h3 {
     font-family: var(--input);
     font-size: 25px;
     text-align: left;
@@ -132,7 +132,7 @@ h3 {
     margin: 10px 0;
 }
 
-.p1 {
+.signup .p1 {
     font-family: var(--input);
     font-size: 15px;
     text-align: justify;
@@ -144,14 +144,14 @@ h3 {
 
 }
 
-.brand-wrapper {
+.signup .brand-wrapper {
     width: 400px;
     display: flex;
     justify-content: flex-start;
     margin: 25px;
 }
 
-.sign-up-btn-container {
+.signup .sign-up-btn-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -159,35 +159,35 @@ h3 {
     width: 70%;
 }
 
-.sign-up-btn {
+.signup .sign-up-btn {
     background: var(--tertiary);
     border: none;
     outline: none;
     cursor: pointer;
     font-size: 20px;
-    padding: 8px 11px;
+    padding: 8px 13px;
     border-radius: 50%;
     transition: all 0.2s ease-in-out;
 }
 
-.sign-up-btn i {
+.signup .sign-up-btn i {
     display: inline-block;
     transition: all 0.2s ease-in-out;
 }
 
-.sign-up-btn:hover {
+.signup .sign-up-btn:hover {
     filter: brightness(120%);
 }
 
-.sign-up-btn:hover i {
+.signup .sign-up-btn:hover i {
     transform: translateX(2px);
 }
 
-.sign-up-btn:active {
+.signup .sign-up-btn:active {
     filter: brightness(80%);
 }
 
-.sign-up-btn-container label {
+.signup .sign-up-btn-container label {
     color: var(--text);
     font-family: var(--button);
     font-size: 18px;

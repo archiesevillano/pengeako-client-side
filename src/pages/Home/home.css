@@ -1,0 +1,311 @@
+.homepage {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.homepage::-webkit-scrollbar {
+    width: 10px;
+}
+
+.homepage::-webkit-scrollbar-track {
+    background-color: var(--secondary);
+}
+
+.homepage::-webkit-scrollbar-thumb {
+    background-color: var(--tertiary);
+    border-radius: 10px;
+    border: 3px solid var(--secondary);
+}
+
+.homepage .btn-col {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    gap: 10px;
+}
+
+.homepage-hero {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.homepage .homepage-caption {
+    font-size: 50px;
+    font-family: var(--caption);
+    color: var(--text);
+    margin: 0 0 10px;
+}
+
+
+.homepage .sub-caption {
+    font-size: 20px;
+    font-family: var(--button);
+    color: var(--text);
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+.homepage .right .img-holder {
+    position: relative;
+}
+
+.homepage .right .img-holder .showcase-product {
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+    transform: scale(1.4);
+}
+
+.homepage .right .img-holder .img-logo {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+.homepage .hero-cards {
+    background-color: var(--body);
+    border-radius: 30% 30% 0 0;
+}
+
+.homepage .hero-cards .collection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    transform: translateY(-100px)
+}
+
+.food-collage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background: none;
+    margin-top: 50px;
+}
+
+.food-collage .collage {
+    display: flex;
+    height: 370px;
+    width: 1200px;
+    background: none;
+    gap: 10px;
+}
+
+.food-collage .collage .left,
+.food-collage .collage .right {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.food-collage .collage .left {
+    width: 50%;
+    position: relative;
+}
+
+.food-collage .collage .right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.food-collage .collage .left img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.food-collage .collage .right div {
+    height: 50%;
+    width: 100%;
+}
+
+.food-collage .collage .right {
+    height: 100%;
+}
+
+.food-collage .collage .right .top-image {
+    width: 100%;
+    height: 50%;
+    background-color: var(--primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.food-collage .collage .right .top-image .halo {
+    position: absolute;
+    top: -20px;
+    right: -35px;
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+}
+
+.food-collage .collage .right .bottom-image {
+    background: var(--quaternary);
+    width: 100%;
+    height: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.food-collage .collage .right .bottom-image img {
+    object-fit: contain;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    right: -70px;
+    top: -80px;
+}
+
+.collage .collage-text-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    color: var(--text);
+    padding: 20px;
+}
+
+.collage .collage-text-content p {
+    font-family: var(--input);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.collage .collage-text-content h2 {
+    font-family: var(--caption);
+}
+
+.collage .left .collage-text-content:before {
+    content: '\f818';
+    font-family: 'FontAwesome';
+    position: relative;
+    top: -5px;
+    left: 0;
+    font-size: 22px;
+    color: var(--tertiary);
+}
+
+.collage .right .top-image .collage-text-content:before {
+    content: '\f810';
+    font-family: 'FontAwesome';
+    position: relative;
+    top: -5px;
+    left: 0;
+    font-size: 22px;
+    color: var(--tertiary);
+}
+
+.collage .right .bottom-image .collage-text-content:before {
+    content: '\f805';
+    font-family: 'FontAwesome';
+    position: relative;
+    top: -5px;
+    left: 0;
+    font-size: 22px;
+    color: var(--tertiary);
+}
+
+.subheadings {
+    text-align: center;
+}
+
+.subheadings h1 {
+    font-family: var(--title);
+    color: var(--tertiary);
+    font-size: 55px;
+}
+
+.subheadings p {
+    font-family: var(--caption);
+    color: var(--text);
+}
+
+
+
+.new-customer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 500px;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FMENU%2Fburger%2Fmessy-pizza-on-a-black-table.jpg?alt=media&token=d31bc18e-92d4-44d6-a521-772f18fd590d);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.new-customer-section .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.new-customer-section .content h2 {
+    font-family: var(--button);
+    opacity: 0.9;
+    font-style: italic;
+    color: var(--text);
+    font-weight: normal;
+    position: relative;
+}
+
+.new-customer-section .content h2::before,
+.new-customer-section .content h2::after {
+    position: absolute;
+    width: 100px;
+    height: 8%;
+    background-color: var(--tertiary);
+    content: '';
+    top: 50%;
+}
+
+.new-customer-section .content h2::before {
+    left: -80%;
+}
+
+.new-customer-section .content h2::after {
+    right: -80%;
+}
+
+.new-customer-section .content h1 {
+    font-family: var(--button);
+    color: var(--text);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 45px;
+}
+
+.new-customer-section .content .p1 {
+    font-family: var(--button);
+    font-style: italic;
+    color: var(--text);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.new-customer-section .content .p2 {
+    font-family: var(--input);
+    font-style: italic;
+    color: var(--text);
+    font-weight: bold;
+    font-size: 15px;
+    margin: 10px 0 30px;
+}

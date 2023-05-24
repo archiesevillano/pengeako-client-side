@@ -1,10 +1,10 @@
-import "./signin.css";
+import "./signup.css";
 import LineField from "../../components/LineField/lineField";
 import Brand from "../../components/Brand/brand";
 
-const SignIn = () => {
+const SignUp = () => {
     return (
-        <div className="signin">
+        <div className="signup">
             <div className="col1">
                 <div className="brand-wrapper">
                     <Brand name="PENGEAKO" />
@@ -13,7 +13,7 @@ const SignIn = () => {
                     <h3>Join us today and unlock <br />a special offer just for you!</h3>
                     Sign up now and receive three complimentary shipping vouchers, available exclusively for new members. Don't miss out on this fantastic opportunity to experience hassle-free delivery with our delicious offerings.
                 </p>
-                <form className="signin-form" autoComplete="off">
+                <form className="signup-form" autoComplete="off">
                     <LineField placeholder={"Email Address"} label={"Email Address"} type={"text"} icon="fa-solid fa-user" id="new-email-input" />
                     <LineField placeholder={"Password"} label={"New Password"} type={"password"} icon="fa-solid fa-key" id="new-password-input" />
                     <LineField placeholder={"Password"} label={"Confirm Password"} type={"password"} icon="fa-solid fa-arrow-rotate-right" id="confirm-password-input" />
@@ -36,4 +36,4 @@ const SignIn = () => {
     )
 }
 
-export default SignIn;
+export default SignUp;

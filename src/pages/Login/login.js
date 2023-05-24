@@ -3,18 +3,17 @@ import LineField from "../../components/LineField/lineField";
 import AppButton from "../../components/AppButton/appButton";
 import "./login.css";
 import CloseButton from "../../components/CloseButton/closeButton";
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Redirect, useLocation } from "react-router-dom";
+import Backdrop from "../../components/Overlay/backdrop";
 
 
-const Login = () => {
+const Login = ({ closeModal }) => {
 
     //return this if the user is authenticated
     return (
-        <motion.div className="overlay" initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ opacity: 0, scale: 0 }}>
+        <Backdrop>
             <motion.div className="login-form" initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.3 }} exit={{ opacity: 0, scale: 0 }}>
-                <CloseButton top="-10px" right="-12px" />
+                <CloseButton top="-10px" right="-12px" action={closeModal} />
                 <header>
                     <Brand name="Pengeako" />
                     <p>Unleash your taste buds' wildest desires</p>
@@ -34,8 +33,7 @@ const Login = () => {
                 </div>
                 <p className="footer"><a>Create an account</a> and delight in a plethora of promotions <br />and discounts exclusively offered by us.</p>
             </motion.div>
-        </motion.div>
-
+        </Backdrop>
     )
 }
 
