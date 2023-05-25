@@ -1,6 +1,8 @@
 .deliveries-section {
     width: 100%;
     height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 .deliveries-section .col1 {
@@ -40,4 +42,164 @@
     color: var(--text);
     font-weight: bold;
     margin-top: 15px;
+}
+
+.deliveries-section .col2 {
+    display: flex;
+    justify-content: baseline;
+    align-items: flex-start;
+    width: 50%;
+    flex-direction: column;
+}
+
+.deliveries-section .col2 h1 {
+    font-family: var(--button);
+    font-weight: normal;
+    padding: 25px;
+}
+
+.deliveries-section .col2 .progress {
+    width: 3px;
+    height: 400px;
+    background-color: #e2e2e2;
+    margin-left: 100px;
+    position: relative;
+}
+
+.deliveries-section .col2 .progress .progress-value {
+    background-color: var(--success);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    transform: translateX(-40%);
+    border-radius: 30px;
+    transition: all 0.4s ease-in-out;
+    border: 3px solid var(--text);
+}
+
+.deliveries-section .col2 .progress span {
+    display: inline-block;
+    width: 200px;
+    font-family: var(--button);
+    font-size: 13px;
+    opacity: 1;
+    font-weight: bold;
+}
+
+.deliveries-section .col2 .progress .preparing {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    transform: translateY(-25%);
+}
+
+.deliveries-section .col2 .progress .onTheWay {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-25%);
+}
+
+.deliveries-section .col2 .progress .completed {
+    position: absolute;
+    bottom: 0;
+    left: 15px;
+    transform: translateY(25%);
+}
+
+.deliveries-section .col2 .progress span .time {
+    font-weight: normal;
+}
+
+.deliveries-section .col3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.deliveries-section .col3 .delivery-address-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: flex-start;
+    font-family: var(--button);
+    padding: 20px;
+    background-color: #e9e9e9;
+    width: 350px;
+}
+
+.deliveries-section .col3 .delivery-address-section h2 {
+    margin-bottom: 5px;
+}
+
+.deliveries-section .col3 .delivery-address-section h2 span {
+    display: inline-block;
+    transform: translate(-10px, 3px);
+}
+
+.deliveries-section .col3 .delivery-address-section p {
+    font-size: 13px;
+    margin-left: 20px;
+    padding: 2px;
+}
+
+
+.deliveries-section .col3 .order-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: flex-start;
+    font-family: var(--button);
+    padding: 20px;
+    background-color: #e9e9e9;
+    width: 350px;
+}
+
+.deliveries-section .col3 .order-details .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.deliveries-section .col3 .order-details .order-id-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    padding: 5px 0;
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.deliveries-section .col3 .order-details .order-id-container .copy-id-btn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: var(--success);
+    text-transform: uppercase;
+    background: none;
+    font-weight: bold;
+    filter: brightness(90%);
+    font-family: var(--button);
+    transform: translateY(-2px);
+}
+
+.deliveries-section .col3 .order-details .complete-order-btn {
+    width: 100%;
+    background-color: var(--secondary);
+    color: var(--text);
+    font-family: var(--button);
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin: 4px 0;
 }

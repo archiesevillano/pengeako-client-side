@@ -16,10 +16,6 @@ const navItems = [
         path: "manage-account",
     },
     {
-        label: "My Coins",
-        path: "coins",
-    },
-    {
         label: "My Favorites",
         path: "favorites",
     },

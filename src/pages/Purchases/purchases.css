@@ -1,0 +1,19 @@
+.purchase-history {
+    width: 100%;
+    padding: 30px 40px;
+}
+
+.purchase-history h1 {
+    font-family: var(--button);
+    transform: translateX(130px);
+}
+
+.purchase-history .purchases {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: baseline;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+}

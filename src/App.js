@@ -17,7 +17,6 @@ import Coupons from "./pages/Coupons/coupons";
 import Favorites from "./pages/My Favorites/favorites";
 import ManageAccount from "./pages/Manage Account/manageAccount";
 import Ratings from "./pages/Ratings/ratings";
-import Coins from "./pages/Coins/coins";
 
 
 
@@ -59,7 +58,6 @@ function App() {
                 <Route exact path="deliveries" element={<Deliveries />} />
                 <Route exact path="purchases" element={<Purchases />} />
                 <Route exact path="manage-account" element={<ManageAccount />} />
-                <Route exact path="coins" element={<Coins />} />
                 <Route exact path="favorites" element={<Favorites />} />
                 <Route exact path="ratings" element={<Ratings />} />
                 <Route exact path="my-coupons" element={<Coupons />} />

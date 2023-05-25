@@ -1,7 +1,12 @@
 import "./manageAccount.css";
 const ManageAccount = () => {
     return (
-        <h1>Manage Account</h1>
+        <div className="manage-account">
+            <h1>Manage Account Information</h1>
+            <div className="data-row">
+
+            </div>
+        </div>
     );
 }
 

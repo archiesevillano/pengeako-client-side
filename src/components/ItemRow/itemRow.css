@@ -1,0 +1,80 @@
+.item-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border: 1px solid #d3d3d3;
+    padding: 25px 40px;
+    border-radius: 30px;
+}
+
+.item-row .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.item-row .header .collection-item-count {
+    font-family: var(--button);
+}
+
+.item-row main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.item-row main .row-collection-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.item-row main .row-collection-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.item-row main .row-collection-item .col {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    font-family: var(--button);
+}
+
+.item-row main .row-collection-item .col p:first-child {
+    font-weight: bold;
+}
+
+.item-row main .row-collection-item .col p:last-child {
+    font-size: 13px;
+}
+
+.item-row .header .collection-item-count .payment-method {
+    background-color: var(--secondary);
+    color: var(--text);
+    font-family: var(--button);
+    font-size: 14px;
+    font-weight: normal;
+    display: inline-block;
+    padding: 4px;
+    margin-left: 10px;
+    transform: translateY(-4px);
+}
+
+.item-row .header .collection-id {
+    font-family: var(--button);
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+.item-row .item-price,
+.item-row .item-quantity,
+.item-row .item-total {
+    font-family: var(--button);
+}
