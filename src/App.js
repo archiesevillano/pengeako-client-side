@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react';
 import AppHeader from "./components/AppHeader/appHeader";
 import Home from "./pages/Home/home";
 import "./App.css";
+import Menu from "./pages/Menu/menu";
+import Cart from "./pages/Cart/cart";
 
 function App() {
 
@@ -36,6 +38,8 @@ function App() {
               <Route exact path="/" element={<Home />} />
               <Route exact path={`/login`} element={<Login />} />
               <Route exact path="/signup" element={<SignUp />} />
+              <Route exact path="/menu" element={<Menu />} />
+              <Route exact path="/cart" element={<Cart />} />
             </Routes>
           </div>
         </Router>

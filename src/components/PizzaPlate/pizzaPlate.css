@@ -1,0 +1,29 @@
+.pizza-plate {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    padding: 10px;
+    position: relative;
+}
+
+.pizza-plate img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    box-shadow: 20px 20px 60px #2e2e2e0c,
+        -20px -20px 60px #16161600;
+    border-radius: 50%;
+}
+
+.pizza-plate .price {
+    background-color: var(--deep-dark);
+    color: var(--text);
+    position: absolute;
+    top: 0;
+    right: -15px;
+    z-index: 1;
+    padding: 10px;
+    font-family: var(--tag);
+    border-radius: 15px 0 15px 0;
+}

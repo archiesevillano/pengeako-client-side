@@ -1,0 +1,8 @@
+.ticket-label {
+    display: inline-block;
+    background-color: #e0b335;
+    color: #b93535;
+    font-weight: bold;
+    font-family: var(--input);
+    padding: 2px 5px;
+}

@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Unica+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Manrope:wght@200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700;800&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Titan+One&family=Unica+One&display=swap');
 
 /* 
+font-family: 'Abril Fatface', cursive;
+font-family: 'Anton', sans-serif;
 font-family: 'Manrope', sans-serif;
 font-family: 'Open Sans', sans-serif;
 font-family: 'Quicksand', sans-serif;
 font-family: 'Roboto Slab', serif;
+font-family: 'Titan One', cursive;
 font-family: 'Unica One', cursive;
 */
 
@@ -16,18 +18,23 @@ font-family: 'Unica One', cursive;
   --button: 'Open Sans', sans-serif;
   --category: 'Manrope', sans-serif;
   --caption: 'Roboto Slab', serif;
+  --price: 'Abril Fatface', cursive;
+  --tag: 'Anton', sans-serif;
+  --disc: 'Titan One', cursive;
 
   /* Colors */
+  --body-invert: #f8f8f8;
   --primary: #541A2E;
   --secondary: #B51A2B;
   --tertiary: #FFA586;
   --quaternary: #384358;
   --quinary: #242F49;
-  --last: #161E2F;
-  --body: #131212;
+  --last: #0c0c0c;
+  --body: #f8f5f5;
   /* Text Default Colors */
   --text: rgb(238, 238, 238);
   --text-invert: #080808;
+  --deep-dark: #070707;
 }
 
 * {
@@ -36,17 +43,14 @@ font-family: 'Unica One', cursive;
 }
 
 body {
-  background: rgb(84, 26, 46);
-  background: linear-gradient(315deg, rgba(84, 26, 46, 1) 0%, rgba(181, 26, 43, 1) 16%, rgba(255, 165, 134, 1) 33%, rgba(56, 67, 88, 1) 53%, rgba(36, 47, 73, 1) 71%, rgba(22, 30, 47, 1) 87%, rgba(19, 18, 18, 1) 100%);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: var(--body-invert);
   width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
 }
 
-body::after {
+/* body::after {
   width: 101%;
   height: 101%;
   background-image: url(https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fbackgrounds%20or%20ads%2Fmangkok-kokak.jpg?alt=media&token=c2ee4a11-494b-49b0-8158-d6398656cb460);
@@ -58,4 +62,4 @@ body::after {
   z-index: -1;
   content: '';
   filter: blur(10px) opacity(50%) brightness(50%);
-}
+} */
