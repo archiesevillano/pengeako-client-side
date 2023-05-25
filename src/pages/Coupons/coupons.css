@@ -1,0 +1,16 @@
+.coupon-page {
+    padding: 30px;
+}
+
+.coupon-page h1 {
+    font-family: var(--button);
+}
+
+.coupon-page .coupon-list {
+    padding: 30px;
+    gap: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
