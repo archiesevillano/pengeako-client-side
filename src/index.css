@@ -35,6 +35,10 @@ font-family: 'Unica One', cursive;
   --text: rgb(238, 238, 238);
   --text-invert: #080808;
   --deep-dark: #070707;
+
+
+  --success: #79b996;
+  --information: #333;
 }
 
 * {

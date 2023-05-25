@@ -4,7 +4,7 @@ import AppButton from "../../components/AppButton/appButton";
 import "./login.css";
 import CloseButton from "../../components/CloseButton/closeButton";
 import { motion } from "framer-motion";
-import Backdrop from "../../components/Overlay/backdrop";
+import Backdrop from "../../components/Backdrop/backdrop";
 
 
 const Login = ({ closeModal }) => {

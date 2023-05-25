@@ -8,10 +8,24 @@ import Home from "./pages/Home/home";
 import "./App.css";
 import Menu from "./pages/Menu/menu";
 import Cart from "./pages/Cart/cart";
+import Backdrop from "./components/Backdrop/backdrop";
+import FloatingNav from "./components/FloatingNav/floatingNav";
+import Profile from "./pages/Profile/profile";
+import Deliveries from "./pages/Deliveries/deliveries";
+import Purchases from "./pages/Purchases/purchases";
+import Coupons from "./pages/Coupons/coupons";
+import Favorites from "./pages/My Favorites/favorites";
+import ManageAccount from "./pages/Manage Account/manageAccount";
+import Ratings from "./pages/Ratings/ratings";
+import Coins from "./pages/Coins/coins";
+
+
 
 function App() {
 
   const [currentURL, setCurrentURL] = useState(window.location.href);
+  const [auth, setAuth] = useState(true);
+  const [float, setFloat] = useState(false);
 
   useEffect(() => {
     const handleURLChange = () => {
@@ -31,6 +45,7 @@ function App() {
     <div className="App">
       <AnimatePresence mode="popLayout">
         {/*showLogin && <Login close={setShowLogin} >*/}
+        {float && <Backdrop showBg={true}><FloatingNav image={"https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fuser_placeholder.png?alt=media&token=830ea0d8-bbf9-4a68-b552-a6f6e313e6b1"} /></Backdrop>}
         <Router>
           <AppHeader />
           <div className="route-display">
@@ -40,6 +55,15 @@ function App() {
               <Route exact path="/signup" element={<SignUp />} />
               <Route exact path="/menu" element={<Menu />} />
               <Route exact path="/cart" element={<Cart />} />
+              <Route exact path="/profile" element={<Profile />}>
+                <Route exact path="deliveries" element={<Deliveries />} />
+                <Route exact path="purchases" element={<Purchases />} />
+                <Route exact path="manage-account" element={<ManageAccount />} />
+                <Route exact path="coins" element={<Coins />} />
+                <Route exact path="favorites" element={<Favorites />} />
+                <Route exact path="ratings" element={<Ratings />} />
+                <Route exact path="my-coupons" element={<Coupons />} />
+              </Route>
             </Routes>
           </div>
         </Router>
