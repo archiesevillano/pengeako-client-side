@@ -1,0 +1,28 @@
+.favorites-page {
+    width: 100%;
+}
+
+.favorites-page .my-fav {
+    font-family: var(--button);
+    margin-left: 40px;
+    color: var(--quaternary);
+    padding: 20px 0;
+}
+
+.favorites-page .favorite-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+    padding: 50px;
+    width: 100%;
+}
+
+.favorites-page .favorite-list .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 80px;
+    width: 80%;
+}

@@ -5,7 +5,8 @@
     border-radius: 5px;
 }
 
-.text-field input[type=text] {
+.text-field input[type=text],
+.text-field input[type=password] {
     background: none;
     border: 0;
     outline: none;
