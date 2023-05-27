@@ -31,7 +31,6 @@ const LineField = ({ label, placeholder, type, id, width, inputReceiver, icon })
 
     useEffect(() => {
         if (defaultType === "password") {
-            console.log(defaultType);
             setFieldType("password");
             setEye(true);
         }

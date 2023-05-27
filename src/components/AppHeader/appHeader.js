@@ -3,15 +3,16 @@ import LogInSignUp from "../LogInSignUp/logInSignUp";
 import TopNav from "../TopNav/topNav";
 import "./appHeader.css";
 import { useLocation, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import UserPanel from "./../UserPanel/userPanel";
 import Backdrop from "../Backdrop/backdrop";
 import FloatingNav from "../FloatingNav/floatingNav";
+import { AuthStatus } from "../Context/Auth";
 
 const AppHeader = () => {
 
+    const authenticated = useContext(AuthStatus);
     const navigate = useNavigate("/login");
-    const [auth, setAuth] = useState(true);
 
     const loginform = () => {
         navigate(`/login`);
@@ -39,7 +40,7 @@ const AppHeader = () => {
                 <Brand name="Pengeako" />
             </div>
             <TopNav links={["Menu", "Careers", "Contacts", "About"]} width="auto" />
-            {auth === true ? <UserPanel /> : <LogInSignUp loginAction={loginform} signupAction={null} />}
+            {authenticated ? <UserPanel /> : <LogInSignUp loginAction={loginform} signupAction={null} />}
         </header>
     );
 }

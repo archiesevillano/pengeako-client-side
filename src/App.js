@@ -1,4 +1,5 @@
 import { AnimatePresence } from "framer-motion";
+import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login/login';
 import SignUp from './pages/SignUp/signup';
@@ -17,13 +18,18 @@ import Coupons from "./pages/Coupons/coupons";
 import Favorites from "./pages/My Favorites/favorites";
 import ManageAccount from "./pages/Manage Account/manageAccount";
 import Ratings from "./pages/Ratings/ratings";
+import Auth from "./components/Context/Auth";
+import Shopper from "./components/Context/Shopper";
+import ContactPage from "./pages/ContactUs/contactUs";
+import About from "./pages/About/about";
+import CareerPage from "./pages/Career/careerPage";
 
 
 
 function App() {
 
   const [currentURL, setCurrentURL] = useState(window.location.href);
-  const [auth, setAuth] = useState(true);
+  const [isAuth, setIsAuth] = useState(true);
   const [float, setFloat] = useState(false);
 
   useEffect(() => {
@@ -42,30 +48,38 @@ function App() {
 
   return (
     <div className="App">
-      <AnimatePresence mode="popLayout">
-        {/*showLogin && <Login close={setShowLogin} >*/}
-        {float && <Backdrop showBg={true}><FloatingNav image={"https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fuser_placeholder.png?alt=media&token=830ea0d8-bbf9-4a68-b552-a6f6e313e6b1"} /></Backdrop>}
-        <Router>
-          <AppHeader />
-          <div className="route-display">
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route exact path={`/login`} element={<Login />} />
-              <Route exact path="/signup" element={<SignUp />} />
-              <Route exact path="/menu" element={<Menu />} />
-              <Route exact path="/cart" element={<Cart />} />
-              <Route exact path="/profile" element={<Profile />}>
-                <Route exact path="deliveries" element={<Deliveries />} />
-                <Route exact path="purchases" element={<Purchases />} />
-                <Route exact path="manage-account" element={<ManageAccount />} />
-                <Route exact path="favorites" element={<Favorites />} />
-                <Route exact path="ratings" element={<Ratings />} />
-                <Route exact path="my-coupons" element={<Coupons />} />
-              </Route>
-            </Routes>
-          </div>
-        </Router>
-      </AnimatePresence>
+      <Auth>
+        <Shopper>
+          <AnimatePresence mode="popLayout">
+            {/*showLogin && <Login close={setShowLogin} >*/}
+            {float && <Backdrop showBg={true}><FloatingNav image={"https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fuser_placeholder.png?alt=media&token=830ea0d8-bbf9-4a68-b552-a6f6e313e6b1"} /></Backdrop>}
+            <Router>
+              <AppHeader />
+              <div className="route-display">
+                <Routes>
+                  <Route exact path="/" element={<Home />} />
+                  <Route exact path="/cart" element={<Cart />} />
+                  <Route exact path={`/login`} element={<Login />} />
+                  <Route exact path="/signup" element={<SignUp />} />
+                  <Route exact path="/menu" element={<Menu />} />
+                  <Route exact path="/contacts" element={<ContactPage />} />
+                  <Route exact path="/about" element={<About />} />
+                  <Route exact path="/careers" element={<CareerPage />} />
+                  <Route exact path="/cart" element={<Cart />} />
+                  <Route exact path="/profile" element={<Profile />}>
+                    <Route exact path="deliveries" element={<Deliveries />} />
+                    <Route exact path="purchases" element={<Purchases />} />
+                    <Route exact path="manage-account" element={<ManageAccount />} />
+                    <Route exact path="favorites" element={<Favorites />} />
+                    <Route exact path="ratings" element={<Ratings />} />
+                    <Route exact path="my-coupons" element={<Coupons />} />
+                  </Route>
+                </Routes>
+              </div>
+            </Router>
+          </AnimatePresence>
+        </Shopper>
+      </Auth>
     </div>
   );
 }

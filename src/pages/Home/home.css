@@ -223,8 +223,9 @@
 
 .subheadings h1 {
     font-family: var(--title);
-    color: var(--tertiary);
+    color: var(--secondary);
     font-size: 55px;
+    text-transform: capitalize;
 }
 
 .subheadings p {

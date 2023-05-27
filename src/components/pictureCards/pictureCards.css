@@ -1,0 +1,113 @@
+
+/* Picture Cards */
+
+.card {
+    width: 240px; 
+    height: 310px;
+    border-radius: 7px 7px 7px 130px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .card.hovered img {
+    transform: scale(1.1);
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 130px;
+    background-color: rgba(41, 41, 41, 0.4);
+    transition: opacity 1 ease;
+    opacity: 1;
+  }
+  .card.hovered .overlay {
+    opacity: 1;
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .overlay p {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: var(--input);
+    margin-bottom: 10px;
+    transition: transform 0.5s ease;
+    transform: translateY(100%);
+    padding: 20px 15px 0px 0
+  }
+  .card.hovered .overlay p {
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .socmed-icons {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease;
+    
+    padding: 15px 5px;
+    gap: 13px
+  }
+  .card.hovered .socmed-icons {
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .socmed-icons i {
+    color: white;
+    font-size: 30px;
+    margin-right: 6px;
+    
+  
+  transition: background-image 0.3s ease;
+  }
+  .socmed-icons .fa-facebook:hover {
+    color: #2b6af3;
+  
+  
+  transition: background-image 0.3s ease;
+  cursor: pointer;
+  animation: colorChange .7s linear forwards;
+  }
+  .socmed-icons .fa-instagram:hover {
+    background-image: linear-gradient(to right, #FEDA75, #FA7E1E, #D62976, #962FBF, #4F5BD5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    animation: colorChangeInsta 1.5s linear forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+ 
+  
+  /* End of Picture Cards */

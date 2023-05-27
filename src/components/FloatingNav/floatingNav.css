@@ -113,6 +113,7 @@
     border-radius: 5px;
     cursor: pointer;
     border: none;
+    text-decoration: none;
 }
 
 .floating-nav .floating-links {
@@ -124,10 +125,12 @@
     background: #d4d4d4;
     border-radius: 0 0 30px 30px;
     border: 3px solid var(--text);
+
 }
 
 .floating-nav .floating-links li {
     width: 100%;
+
 }
 
 .floating-nav .floating-links li a {
@@ -136,7 +139,9 @@
     padding: 10px 15px;
     font-family: var(--button);
     cursor: pointer;
-    transform: translateY(-5px)
+    transform: translateY(-5px);
+    text-decoration: none;
+    color: var(--secondary)
 }
 
 .floating-nav .floating-links li a span {
@@ -172,3 +177,5 @@
 .floating-nav .logout-btn:active {
     filter: brightness(90%);
 }
+
+.floating-nav-container {}

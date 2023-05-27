@@ -1,0 +1,130 @@
+/* Career Page */
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #131212;
+}
+.careerpage-container {
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fbackgrounds%20or%20ads%2FCareerPageBG.png?alt=media&token=75ee029b-150b-445d-806e-097410b88840');
+    height: 550px;
+    background-repeat: no-repeat;
+    background-position: unset;
+    background-size: cover;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  
+    filter: brightness(1.5);
+    -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 7), rgba(0, 0, 0, 7), transparent); 
+    mask-image: linear-gradient(rgba(0, 0, 0, 7), rgba(0, 0, 0, 7), transparent); 
+  
+  }
+  .careertext-container {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    text-align: end;
+    color: white;
+    margin: 120px;
+    
+  }
+  .careertext-container h3 {
+    font-size: 30px;
+    font-family: var(--caption);
+    font-weight: 400;
+  }
+  .career-line {
+    border-color: var(--secondary);
+    border-style: solid;
+    border-width: 2px;
+    width: 140px;
+    display:flex;
+    margin-left: auto;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+  .careertext-container p {
+    font-size: 24px;
+    margin-bottom: 14px;
+    font-family: var(--input);
+  }
+  .careertext-container span {
+    font-size: 30px;
+    color: white;
+    background-color: var(--last);
+    width: 250px;
+    text-align: center;
+    padding: 3px;
+    margin-left: auto;
+    margin-right: 0;
+    border-radius: 5px;
+    font-family: var(--input);
+  }
+  
+  .career-line {
+    border-color: var(--secondary);
+    border-style: solid;
+    border-width: 2px;
+    width: 140px;
+    display:flex;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .careerjob-container {
+    display: flex;
+    align-items: center;
+  }
+  .job-posting {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  .jobposting-text p {
+    font-family: var(--caption);
+    color: white;
+    text-align: left;
+    font-size: 24px;
+  }
+  .text-search-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    
+  }
+  .jobposting-search input {
+    outline: none;
+    padding: 5px 14px;
+    color: white;
+    width: 230px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--secondary);
+    
+  }
+  .jobposting-search button {
+    background: none;
+    color: white;
+    height: 10px;
+    border: none;
+    cursor:pointer;
+  }
+  .jobposting-search input::placeholder {
+    font-family: var(--input);
+    color: white;
+    
+  }
+  .no-job-found {
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    width: 900px;
+  }
+  .no-job-found p {
+    color: white;
+    font-family: var(--input);
+    font-size: 25px;
+    
+  }
+  /* End of Career Page */

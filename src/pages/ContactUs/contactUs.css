@@ -1,0 +1,148 @@
+/* Contact Us  */
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #131212;
+}
+
+.contacthero-container {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    height: 100vh;
+    font-family: var(--input );
+    /* background-image: url('https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/contactbackground.png?alt=media&token=cb2befd0-ddaa-4608-95b6-b548b98ed363'); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background: linear-gradient(to right, #131212,#FFA586, #161E2F); */
+    
+  }
+  .contactus-line {
+    border-style: solid;
+    width: 170px;
+    border-color: var(--secondary); 
+    border-width: 2px;
+  }
+  .your-details-container {
+   display: flex;
+   justify-content: flex-end;
+   position: relative;
+   bottom: 13px;
+   right: 85px;
+   
+  }
+  .iconscontainer {
+    display:flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    
+  }
+  .icons-Container {
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+    margin-bottom: 20px;
+  }
+  .iconscontainer i {
+    font-size: 25px;
+    color: var(--tertiary)
+  }
+  .topicons {
+    display:flex;
+    gap: 80px;
+  }
+  
+   
+  
+  .text-container {
+    display:flex;
+    flex-direction: column;
+    text-align: start;
+  }
+  .text-container p {
+    font-family: var(--input);
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .text-container span {
+    font-size: 15px;
+  }
+  .contactus-container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  .contact-form-icon {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .texticon-container h3{ 
+    font-family: var(--caption);
+    font-size: 35px;
+  }
+  .contactus-form {
+    display: flex;
+    flex-direction: column;
+    width: 370px;
+    
+  }
+  .inputcontainer {
+    display:flex;
+    flex-direction: column;
+    
+    
+  }
+  .inputcontainer label{
+    justify-content: flex-start;
+  }
+  .inputcontainer input{
+    justify-content: flex-end;
+    width: 300px;
+    outline: none
+  }
+  .inputcontainer textarea {
+    width: 300px;
+   
+    display:flex;
+    
+  }
+  .icecreamImg-container {
+    display:flex;
+    
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    width:50%;
+  }
+  .icecreamImg-container img{
+      width: 100%;
+      border: 1px white;
+  }
+  
+  .contactusbtn-container {
+    display: flex;
+    margin-top: 10px;
+  }
+  .contactus-form button {
+    height: 25px;
+    width: 100px;
+    color: white;
+    background-color: var(--secondary);
+    border:none;
+    border-radius: 4px;
+    font-family: var(--button);
+   
+    
+  }
+   
+    
+    
+    
+  
+  /* End of Contact Us */
+  

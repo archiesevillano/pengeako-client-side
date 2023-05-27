@@ -3,11 +3,11 @@ import SearchBar from "../../components/SearchBar/searchBar";
 import ShowcaseCard from "../../components/ShowCaseCard/showcaseCard";
 import PageFooter from "../../components/pageFooter/pageFooter";
 import "./home.css";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from 'react';
 
 const Home = () => {
-
+    const navigate = useNavigate();
     const homePage = document.querySelector(".homepage");
 
     const url = useLocation();
