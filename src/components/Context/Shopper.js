@@ -36,19 +36,33 @@ const Shopper = ({ children }) => {
 }
 
 // Cart Functions
-export const EmptyCart = () => {
-
+//empty the values of the current/selected cart
+export const EmptyCart = async cartID => {
+    try {
+        const response = await Axios.put("", cartID);
+        return response.data;
+    }
+    catch (error) {
+        console.log(error);
+    }
 }
 
-export const RemoveCartItem = id => {
-
+export const RemoveCartItem = cartID => {
+    try {
+        const response = Axios.delete("", cartID);
+    } catch (error) {
+        console.log(error)
+    }
 }
 
+
+//loads the items saved in the cart
 export const LoadCart = async cartID => {
     try {
-        const response = await Axios.post("",)
+        const response = await Axios.post("", cartID);
+        return response.data;
     } catch (error) {
-
+        console.log(error);
     }
 }
 

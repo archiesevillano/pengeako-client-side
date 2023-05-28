@@ -23,6 +23,7 @@ import Shopper from "./components/Context/Shopper";
 import ContactPage from "./pages/ContactUs/contactUs";
 import About from "./pages/About/about";
 import CareerPage from "./pages/Career/careerPage";
+import ScreenLoader from "./components/ScreenLoader/screenLoader";
 
 
 
