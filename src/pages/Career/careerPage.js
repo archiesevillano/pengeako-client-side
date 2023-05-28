@@ -2,6 +2,7 @@ import './careerPage.css';
 import React, { useState, useEffect } from 'react';
 import JobCard from '../../components/JobCard/JobCard';
 import jobData from '../../components/data/jobData';
+import PageFooter from "../../components/pageFooter/pageFooter";
 
 const CareerPage = () => {
   const [searchInput, setSearchInput] = useState('');
@@ -51,13 +52,13 @@ const CareerPage = () => {
               <p>JOB POSTING:</p>
             </div>
             <div className='jobposting-search'>
+              
               <input
                 type='text'
                 value={searchInput}
                 onChange={handleSearchInputChange}
                 placeholder='Search Job'
               />
-              <button onClick={handleSearch}><i className="fa-solid fa-magnifying-glass"></i></button>
             </div>
           </div>
           <div className='jobcards-container'>
@@ -77,7 +78,13 @@ const CareerPage = () => {
             )}
           </div>
         </div>
+        
       </div>
+      <div className='ftr-container'>
+      <PageFooter />
+      </div>
+      
+      
     </>
   );
 };

@@ -3,12 +3,13 @@
     outline: none;
     cursor: pointer;
     font-family: var(--button);
-    background-color: var(--last);
+    background-color: var(--secondary);
     color: var(--tertiary);
     transition: all 0.1s ease-in-out;
     border: none;
-    width: 150px;
+    width: 140px;
     border-radius: 5px;
+    color: var(--text);
 }
 
 .app-button:hover {

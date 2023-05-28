@@ -10,8 +10,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  
   overflow-y: auto;
   opacity: 0;
   animation-name: modalFadeIn;
@@ -20,13 +18,16 @@
 }
 
 .modal-content-checkout {
-  background-color: white;
-  padding: 20px;
+  background-color:white;
+  padding: 15px;
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  max-height: 80vh;
-  width: 450px;
+  height: 600px;
+  width: 700px;
   margin: auto;
+  display:flex;
+  justify-content: space-around;
+ 
 }
 
 .checkouthead-container {
@@ -36,8 +37,8 @@
 
 .checkout-clsbtn {
   position: relative;
-  bottom: 37px;
-  right: 13px;
+  bottom: 33px;
+  left: 35px;
 }
 
 .modal-content-checkout h2 {
@@ -45,7 +46,11 @@
   margin-bottom: 10px;
   font-family: var(--input);
 }
-
+.payment-method-container {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .checkout-btn-container {
   display: flex;
   justify-content: flex-end;
@@ -69,6 +74,9 @@
   animation-name: buttonAnimation;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
+}
+.modal-content-checkout {
+  display:flex;
 }
 
 @keyframes buttonAnimation {

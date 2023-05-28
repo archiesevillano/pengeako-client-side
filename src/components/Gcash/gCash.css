@@ -1,0 +1,41 @@
+.gcash-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    background-color: rgba(233, 228, 228, 0.212);
+    
+}
+.gcashinput-container {
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+}
+.gcashinput-container input {
+    width: 150px;
+    outline:none;
+    border-radius: 5px;
+    border-width: 1px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    
+}
+.gcashinput-container input::placeholder {
+    padding: 10px;
+    font-family: var(--input);
+}
+.gcashinput-container input::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.qr-container {
+    display:flex;
+    flex-direction: column;
+    font-family: var(--input);
+}
+.qr-container img{
+    height: 140px;
+    margin-top:5px;
+    margin-bottom: 10px;
+}

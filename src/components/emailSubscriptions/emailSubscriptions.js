@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import './emailSubscriptions.css';
 import TextField from "../TextField/textField";
+import Appbutton from '../AppButton/appButton';
 
 const EmailSubscriptions = () => {
     const [email, setEmail] = useState('');
@@ -22,7 +23,7 @@ const EmailSubscriptions = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <button type="submit"><i className="fa-solid fa-paper-plane"></i> Subscribe Now</button>
+           <Appbutton type="submit" label="Subscribe Now" icon="fa-solid fa-paper-plane" />
           </form>
         </div>
       );

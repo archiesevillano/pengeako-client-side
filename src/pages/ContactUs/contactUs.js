@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import TextField from '../../components/TextField/textField';
 import AppButton from '../../components/AppButton/appButton';
 import './contactUs.css';
+import PageFooter from '../../components/pageFooter/pageFooter';
 
 const ContactPage = () => {
   const [name, setName] = useState('');
@@ -21,6 +22,7 @@ const ContactPage = () => {
 
 
   return (
+    <>
     <div className='contacthero-container'>
       <div className='contactus-container'>
         <div className='contact-form-icon'>
@@ -68,7 +70,7 @@ const ContactPage = () => {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
-
+                action={(value) => setName(value)}
               />
             </div>
             <div className='inputcontainer'>
@@ -79,6 +81,7 @@ const ContactPage = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                action={(value) => setEmail(value)}
 
               />
             </div>
@@ -90,9 +93,10 @@ const ContactPage = () => {
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
                 required
+                action={(value) => setSubject(value)} 
               />
             </div>
-            <div className='inputcontainer'>
+            <div className='inputcontainer contactmessage'>
               <label htmlFor="message">Message:</label>
 
               <TextField
@@ -100,6 +104,8 @@ const ContactPage = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required
+                action={(value) => setMessage(value)}
+                
               ></TextField>
             </div>
             <div className='contactusbtn-container'>
@@ -111,7 +117,12 @@ const ContactPage = () => {
       <div className='icecreamImg-container'>
         <img src='https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fbackgrounds%20or%20ads%2Fcontact%20us.png?alt=media&token=f92b19a6-6554-4e71-a17b-c1a2f33ba936' alt='Ice Cream' />
       </div>
+      
     </div>
+    <div >
+    <PageFooter />
+    </div>
+    </>
   );
 };
 

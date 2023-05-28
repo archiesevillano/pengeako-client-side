@@ -93,13 +93,13 @@ const FloatingNav = ({ image, logout }) => {
       <ul className="floating-links">
         <li>
           <Link to="/profile/my-favorites">
-            <span className="material-symbols-outlined">favorite</span>
+            <span className="material-symbols-outlined"></span>
             My Favorites
           </Link>
         </li>
         <li>
           <Link to="/profile/my-ratings">
-            <span className="material-symbols-outlined">star</span>
+            <span className="material-symbols-outlined"></span>
             My Ratings
           </Link>
         </li>
