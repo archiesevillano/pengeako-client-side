@@ -49,23 +49,26 @@ const CheckOutModal = ({ closeModal, orderDetails, handlePaymentMethod }) => {
     <Backdrop showBg={true} onClick={handleClickOutside}>
       <div className="modal-checkout">
         <div className="modal-content-checkout" ref={modalContentRef}>
-          <div className="checkouthead-container">
-            <h2>Order Details:</h2>
+          <div className='order-details-container'>
+            <div className="checkouthead-container">
+              <h2>Order Details:</h2>
+              
+            </div>
+            {/* Display order details */}
+            <p>{orderDetails}</p>
+          </div>
+          <div className='payment-method-container'>
+          <div className='payment-cls-btn'>
+            <PaymentMethod handlePaymentMethod={handlePaymentMethod} />
             <div className="checkout-clsbtn">
-              <CloseButton action={handleCloseModal}>Close</CloseButton>
+            <CloseButton action={handleCloseModal}>Close</CloseButton>
             </div>
           </div>
-
-          {/* Display order details */}
-          <p>{orderDetails}</p>
-          {/* Display mode of payment */}
-          <PaymentMethod handlePaymentMethod={handlePaymentMethod} />
-          {/* Close button */}
-          <div className="checkout-btn-container">
-            {/* Submit button */}
-            <button className="submit-checkout-btn" onClick={handleSubmit}>
-              Proceed
-            </button>
+          
+            <div className="checkout-btn-container">
+              <AppButton className="submit-checkout-btn" onClick={handleSubmit} label={'Place Order'}>
+              </AppButton>
+            </div>
           </div>
         </div>
 

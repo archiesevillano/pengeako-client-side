@@ -2,7 +2,7 @@
 body {
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: #131212;
+ 
 }
 
 .contacthero-container {
@@ -15,7 +15,7 @@ body {
     /* background-image: url('https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/contactbackground.png?alt=media&token=cb2befd0-ddaa-4608-95b6-b548b98ed363'); */
     background-size: contain;
     background-repeat: no-repeat;
-    /* background: linear-gradient(to right, #131212,#FFA586, #161E2F); */
+    background: var(--last)
     
   }
   .contactus-line {
@@ -47,7 +47,8 @@ body {
   }
   .iconscontainer i {
     font-size: 25px;
-    color: var(--tertiary)
+    color: var(--secondary);
+    text-shadow: 0 0 7px rgba(255, 255, 255, 0.24);
   }
   .topicons {
     display:flex;
@@ -65,6 +66,7 @@ body {
     font-family: var(--input);
     font-size: 20px;
     font-weight: bold;
+    
   }
   
   .text-container span {
@@ -103,7 +105,9 @@ body {
   .inputcontainer input{
     justify-content: flex-end;
     width: 300px;
-    outline: none
+    outline: none;
+    border:none;
+    background: none;
   }
   .inputcontainer textarea {
     width: 300px;
@@ -128,17 +132,11 @@ body {
     display: flex;
     margin-top: 10px;
   }
-  .contactus-form button {
-    height: 25px;
-    width: 100px;
-    color: white;
-    background-color: var(--secondary);
-    border:none;
-    border-radius: 4px;
-    font-family: var(--button);
-   
-    
-  }
+.contactmessage  input{
+  height: 50px;
+  
+  
+}
    
     
     

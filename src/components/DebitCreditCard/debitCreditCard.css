@@ -1,0 +1,17 @@
+.card-input-container div {
+    display:flex;
+    flex-direction: column;
+    font-family: var(--input);
+}
+.card-input-container label{
+    font-family: var(--input);
+    font-size: 17px;
+}
+.card-input-container input {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    width: 300px;
+}
+.cvv-container input, .expi-container input{
+    width: 130px;
+}

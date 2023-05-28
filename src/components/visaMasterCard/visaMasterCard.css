@@ -1,0 +1,10 @@
+.icon-visa:before {
+    content: "\f1f0";
+    font-family: "Font Awesome 5 Brands";
+  }
+  
+  .icon-mastercard:before {
+    content: "\f1f1";
+    font-family: "Font Awesome 5 Brands";
+  }
+  

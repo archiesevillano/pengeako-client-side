@@ -15,6 +15,7 @@
         0px 0px 17.9px rgba(0, 0, 0, 0.179),
         0px 0px 33.4px rgba(0, 0, 0, 0.216),
         0px 0px 80px rgba(0, 0, 0, 0.3);
+    z-index: 100012123123123;
 }
 
 .floating-nav .upper-content {
@@ -178,4 +179,3 @@
     filter: brightness(90%);
 }
 
-.floating-nav-container {}

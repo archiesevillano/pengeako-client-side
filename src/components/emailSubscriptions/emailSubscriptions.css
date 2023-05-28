@@ -9,27 +9,14 @@
     align-items: flex-end;
     gap: 10px;
 }
+.emailsubscriptions-container input {
+  border: none;
+  background: none;
+  outline:none
+}
 
-.emailsubscriptions-container button {
-    height: 30px;
-    width: 150px;
-    font-size: 15px;
-    font-family: var(--button);
-    border-radius: 5px;
-    border: none;
-    justify-content: flex-end;
-    background-color:var(--secondary);
-    color:white;
-    position: relative;
-    overflow: hidden;
-  }
   
-  .emailsubscriptions-container button:hover {
-    cursor: pointer;
-    animation-name: buttonAnimation;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-  }
+
   
   @keyframes buttonAnimation {
     0% {
