@@ -1,6 +1,6 @@
 .menu-card {
     position: relative;
-    height: 120px;
+    height: 140px;
     width: 220px;
     border-radius: 30px;
     background: #e0e0e0;
@@ -37,6 +37,8 @@
     align-items: center;
     flex-direction: column;
     transition: all 0.2s ease-in-out;
+  
+    
 }
 
 .menu-card .product-details p:first-child {
@@ -63,3 +65,25 @@
     border-radius: 30px 0 30px 0;
     letter-spacing: 1px;
 }
+ .carticons-container {
+   display: flex;
+   align-self: flex-end;
+   
+}
+.menucard-icons button {
+    color: var(--secondary);
+    font-size: 25px;
+    margin-top: 5px;
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .menucard-icons button:hover {
+    transform: scale(1.1);
+  }
+  
+  .menucard-icons button:active {
+    transform: scale(0.9);
+  }

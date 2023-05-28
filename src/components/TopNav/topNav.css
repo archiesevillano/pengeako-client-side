@@ -12,10 +12,11 @@
     color: var(--text);
     font-size: 14px;
     padding: 10px 15px;
-    background-color: var(--last);
+    
     position: relative;
     transition: background-color 0.4s linear 0s;
     flex-shrink: 0;
+
 }
 
 .top-nav-link.home::after {
@@ -127,16 +128,17 @@
 }
 
 .top-nav-link.active {
-    background: var(--secondary);
-    /* background: linear-gradient(0deg, rgba(185, 69, 109, 1) 0%, rgba(181, 26, 43, 1) 71%); */
+    
     pointer-events: none;
-    user-select: none;
+    user-select: none; 
+    
 }
 
 .top-nav-link.active span {
     font-weight: bold;
     opacity: 1;
     left: 50px;
+    animation: underlineAnimation 0.6s linear forwards; 
 }
 
 .top-nav-link.active::after {
@@ -144,4 +146,22 @@
     opacity: 1;
     border: 0;
     padding: 10px;
+    background-color: var(--secondary);
+    
 }
+
+@keyframes underlineAnimation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+

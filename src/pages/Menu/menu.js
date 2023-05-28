@@ -60,7 +60,7 @@ const Menu = () => {
 
 const getCategories = () => {
 
-    const categories = ["Meal", "Dessert", "Appetizer", "Drinks"];
+    const categories = ["BURGER", "PIZZA", "DIMSUM", "DRINKS", "ICE CREAM", "FRIES"];
 
     return categories.map((category, index) => <li key={index + 1}><NavLink className={category.toString().toLocaleLowerCase()} to={`/${category}`}>{category}</NavLink></li>);
 }

@@ -8,6 +8,19 @@ const MenuCard = ({ image, title, description, price }) => {
             <div className="product-details">
                 <p>{title}</p>
                 <p>{description}</p>
+                <div className="carticons-container">
+                <div className="menucard-icons">
+                        <button>
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <div className="menucard-icons">
+                        <button>
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     );

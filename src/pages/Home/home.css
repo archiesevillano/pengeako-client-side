@@ -222,15 +222,15 @@
 }
 
 .subheadings h1 {
-    font-family: var(--title);
+    font-family: var(--input);
     color: var(--secondary);
-    font-size: 55px;
+    font-size: 57px;
     text-transform: capitalize;
 }
 
 .subheadings p {
     font-family: var(--caption);
-    color: var(--text);
+    color: var(--last);
 }
 
 
