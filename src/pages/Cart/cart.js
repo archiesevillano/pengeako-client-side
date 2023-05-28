@@ -1,8 +1,11 @@
 import "./cart.css";
 import QuantityField from "../../components/QuantityField/quantityField";
+import { useContext } from "react";
+import { ModifyCart } from "../../components/Context/Shopper";
 
 
 const Cart = ({ totalItems }) => {
+
     return (
         <div className="cart-page">
             <header>

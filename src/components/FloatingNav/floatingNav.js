@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import './floatingNav.css';
 import { Link, useNavigate } from 'react-router-dom';
+import { removeCookie } from '../../AppCookies';
 
 const FloatingNav = ({ image }) => {
     const navigate = useNavigate();
@@ -21,6 +22,12 @@ const FloatingNav = ({ image }) => {
         const file = e.target.files[0];
         setSelectedImage(file);
     };
+
+    const handleLogout = () => {
+        //remove 'auth-token' in the cookie section for clean up
+        removeCookie("auth-token");
+
+    }
 
     return (
         <nav className="floating-nav" onClick={(e) => e.stopPropagation()}>
@@ -95,7 +102,7 @@ const FloatingNav = ({ image }) => {
                 </li>
 
             </ul>
-            <button className="logout-btn">
+            <button className="logout-btn" onClick={() => removeCookie("auth-token")}>
                 <span className="material-symbols-outlined">
                     logout
                 </span>

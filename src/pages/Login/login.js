@@ -38,7 +38,7 @@ const Login = ({ closeModal }) => {
 
     useEffect(() => {
         if (authResult) {
-            return <Navigate to="/" />
+            <Navigate to="/" />
         }
     }, [authResult]);
 
