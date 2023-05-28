@@ -1,25 +1,42 @@
-import "./cart.css";
-import QuantityField from "../../components/QuantityField/quantityField";
-import { useContext } from "react";
+import React, { useState } from 'react';
+import './cart.css';
+import QuantityField from '../../components/QuantityField/quantityField';
+import PaymentMethod from '../../components/PaymentMethod/paymentMethod';
+import CheckOutModal from '../../components/CheckOut/checkOut';
+import Backdrop from '../../components/Backdrop/backdrop'; import { useContext } from "react";
 import { ModifyCart } from "../../components/Context/Shopper";
 
 
 const Cart = ({ totalItems }) => {
+    const [showModal, setShowModal] = useState(false);
+    const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('');
+
+    const handleCheckout = () => {
+        setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
+    const handlePaymentMethod = (method) => {
+        setSelectedPaymentMethod(method);
+    };
 
     return (
         <div className="cart-page">
-            <header>
-
-            </header>
+            <header></header>
             <main>
                 <h1>Your Cart ({totalItems === undefined ? 0 : totalItems} items)</h1>
                 <div className="content">
                     <table className="cart-table">
                         <thead>
-                            <th>Item</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
+                            <tr>
+                                <th>Item</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
                         </thead>
                         <tbody>
                             <CartRow />
@@ -46,21 +63,35 @@ const Cart = ({ totalItems }) => {
                         <div className="checkout-box">
                             <p>Your Order is now ready to check out</p>
                             <hr />
-                            <button className="place-order-btn">Check out</button>
+                            <button className="place-order-btn" onClick={handleCheckout}>
+                                Check out
+                            </button>
                         </div>
                     </div>
                 </div>
             </main>
+            {showModal && (
+                <Backdrop showBg={true} onClick={handleCloseModal}>
+                    <CheckOutModal
+                        closeModal={handleCloseModal}
+                        orderDetails="Order details go here"
+                        handlePaymentMethod={handlePaymentMethod}
+                    />
+                </Backdrop>
+            )}
         </div>
     );
-}
-
+};
 
 const CartRow = () => {
     return (
         <tr className="cart-row">
             <td>
-                <img className="item-image" src="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FMENU%2Fburger%2Fpngwing.com%20(4).png?alt=media&token=d78b6990-b75e-49e2-8ccc-5eb48b4eb1a6" />
+                <img
+                    className="item-image"
+                    src="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FMENU%2Fburger%2Fpngwing.com%20(4).png?alt=media&token=d78b6990-b75e-49e2-8ccc-5eb48b4eb1a6"
+                    alt="Item"
+                />
                 <div className="item-text-details">
                     <span className="desc">Juicy Giant Burger w/ Beef Patty</span>
                     <p className="product-name">Giant Hamburger Patty</p>
@@ -77,8 +108,6 @@ const CartRow = () => {
             </td>
         </tr>
     );
-}
-
-
+};
 
 export default Cart;
