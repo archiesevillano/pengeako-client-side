@@ -1,10 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './floatingNav.css';
 import { Link, useNavigate } from 'react-router-dom';
-
 import { removeCookie } from '../../AppCookies';
 
-const FloatingNav = ({ image }) => {
+const FloatingNav = ({ image, logout }) => {
   const navigate = useNavigate();
   const fileInputRef = useRef(null);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -27,6 +26,9 @@ const FloatingNav = ({ image }) => {
   const handleLogout = () => {
     // Remove 'auth-token' from the cookie section for clean up
     removeCookie('auth-token');
+    logout(true);
+    navigate("/");
+
   };
 
   const handleClickOutside = (event) => {

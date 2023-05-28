@@ -11,7 +11,7 @@ const AppButton = ({ bgColor, color, label, clickAction, isDisable, icon, width 
         <>
             <button type="button" style={style} className="app-button" disabled={isDisable} onClick={clickAction}>
                 <i className={icon}></i>
-                {label}
+                <label>{label}</label>
             </button>
         </>
     );

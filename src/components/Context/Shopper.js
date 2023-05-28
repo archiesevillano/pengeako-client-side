@@ -7,6 +7,7 @@ import { useState } from 'react';
 export const UserCart = React.createContext();
 export const ModifyCart = React.createContext();
 export const CartInfo = React.createContext();
+export const UserFavorites = React.createContext();
 
 const Shopper = ({ children }) => {
 
@@ -25,13 +26,15 @@ const Shopper = ({ children }) => {
     const [cart, setCart] = useState([]);
 
     return (
-        <CartInfo.Provider value={config}>
-            <UserCart.Provider value={cart}>
-                <ModifyCart.Provider value={setCart}>
-                    {children}
-                </ModifyCart.Provider>
-            </UserCart.Provider>
-        </CartInfo.Provider>
+        <UserFavorites.Provider>
+            <CartInfo.Provider value={config}>
+                <UserCart.Provider value={cart}>
+                    <ModifyCart.Provider value={setCart}>
+                        {children}
+                    </ModifyCart.Provider>
+                </UserCart.Provider>
+            </CartInfo.Provider>
+        </UserFavorites.Provider>
     );
 }
 

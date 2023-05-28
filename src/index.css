@@ -53,17 +53,3 @@ body {
   position: relative;
 
 }
-
-/* body::after {
-  width: 101%;
-  height: 101%;
-  background-image: url(https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fbackgrounds%20or%20ads%2Fmangkok-kokak.jpg?alt=media&token=c2ee4a11-494b-49b0-8158-d6398656cb460);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  z-index: -1;
-  content: '';
-  filter: blur(10px) opacity(50%) brightness(50%);
-} */

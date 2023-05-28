@@ -1,21 +1,5 @@
 .homepage {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.homepage::-webkit-scrollbar {
-    width: 10px;
-}
-
-.homepage::-webkit-scrollbar-track {
-    background-color: var(--secondary);
-}
-
-.homepage::-webkit-scrollbar-thumb {
-    background-color: var(--tertiary);
-    border-radius: 10px;
-    border: 3px solid var(--secondary);
+    height: 100%;
 }
 
 .homepage .btn-col {

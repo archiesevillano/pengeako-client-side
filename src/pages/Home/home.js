@@ -31,9 +31,11 @@ const Home = () => {
             setScrolled(false);
         }
     }
+
     const handleClick = (route) => {
         navigate(`/${route}`);
     };
+
     useEffect(() => {
         homeRef.current.addEventListener('scroll', scrolledState);
     }, []);
@@ -76,7 +78,7 @@ const Home = () => {
                         Fast food made just for you
                     </h1>
                     <div className="btn-col">
-                        <RoundedButton value="Order now" width="140px" themeColor="quinary" bold={true} capslock={true} roundness={"1"} action={() => handleClick('menu')}/>
+                        <RoundedButton value="Order now" width="140px" themeColor="quinary" bold={true} capslock={true} roundness={"1"} action={() => handleClick('menu')} />
                         <RoundedButton value="Best Selling" themeColor="secondary" width="140px" bold={true} capslock={true} roundness={"1"} />
                     </div>
                     <SearchBar placeholder={"Search for Foods"} id="landing-page-search-bar" />
@@ -84,7 +86,6 @@ const Home = () => {
                 <div className="right">
                     <div className="img-holder">
                         <img src="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FMENU%2Fburger%2F40.png?alt=media&token=f112588b-ae1b-47e8-ae11-83758b5ea3c3" className="showcase-product" />
-                        
                     </div>
                 </div>
             </div>

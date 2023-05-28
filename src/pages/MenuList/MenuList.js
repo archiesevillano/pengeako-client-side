@@ -22,6 +22,7 @@ const MenuList = () => {
 
     const handleShowList = category => {
         const response = Axios.get("host", { listCategory: category });
+        return
     }
 
     return (

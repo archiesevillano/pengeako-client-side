@@ -1,0 +1,61 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/login.png?alt=media&token=b9510ba0-ebdf-49b9-8889-445870057966);
+    position: relative;
+}
+
+.login-page .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(0%, -50%);
+}
+
+.login-page .left img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    display: inline-block;
+    transform: scale(2);
+}
+
+.login-page h1 {
+    color: var(--text);
+    font-family: var(--caption);
+    margin: 25px;
+    text-align: center;
+}
+
+.login-page .email-providers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.login-page .email-providers button {
+    font-size: 17px;
+    background: none;
+    border: 1px solid var(--text);
+}
+
+.login-page .email-providers button i {
+    font-size: 30px;
+    display: inline-block;
+    transform: translateX(-13px);
+}
+
+.login-page .email-providers button label {
+    transform: translateY(-4px);
+    display: inline-block;
+    cursor: pointer;
+}

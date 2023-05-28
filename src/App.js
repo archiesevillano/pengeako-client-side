@@ -24,6 +24,7 @@ import ContactPage from "./pages/ContactUs/contactUs";
 import About from "./pages/About/about";
 import CareerPage from "./pages/Career/careerPage";
 import ScreenLoader from "./components/ScreenLoader/screenLoader";
+import LoginPage from "./pages/Login/loginPage";
 
 
 
@@ -32,11 +33,19 @@ function App() {
   const [currentURL, setCurrentURL] = useState(window.location.href);
   const [isAuth, setIsAuth] = useState(true);
   const [float, setFloat] = useState(false);
+  const [isShowHeader, showHeader] = useState(false);
 
   useEffect(() => {
     const handleURLChange = () => {
       setCurrentURL(window.location.href);
     };
+
+    if (currentURL.endsWith("/login")) {
+      showHeader(false);
+    }
+    else {
+      showHeader(true);
+    }
 
     // Attach an event listener to update the currentURL state when the URL changes
     window.addEventListener('popstate', handleURLChange);
@@ -55,12 +64,12 @@ function App() {
             {/*showLogin && <Login close={setShowLogin} >*/}
             {float && <Backdrop showBg={true}><FloatingNav image={"https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fuser_placeholder.png?alt=media&token=830ea0d8-bbf9-4a68-b552-a6f6e313e6b1"} /></Backdrop>}
             <Router>
-              <AppHeader />
+              {isShowHeader && <AppHeader />}
               <div className="route-display">
                 <Routes>
                   <Route exact path="/" element={<Home />} />
                   <Route exact path="/cart" element={<Cart />} />
-                  <Route exact path={`/login`} element={<Login />} />
+                  <Route exact path={`/login`} element={<LoginPage login={showHeader} />} />
                   <Route exact path="/signup" element={<SignUp />} />
                   <Route exact path="/menu" element={<Menu />} />
                   <Route exact path="/contacts" element={<ContactPage />} />
@@ -86,3 +95,4 @@ function App() {
 }
 
 export default App;
+

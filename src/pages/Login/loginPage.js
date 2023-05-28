@@ -1,7 +1,7 @@
 import Brand from "../../components/Brand/brand";
 import LineField from "../../components/LineField/lineField";
 import AppButton from "../../components/AppButton/appButton";
-import "./login.css";
+import "./loginPage.css";
 import CloseButton from "../../components/CloseButton/closeButton";
 import { motion } from "framer-motion";
 import Backdrop from "../../components/Backdrop/backdrop";
@@ -12,8 +12,7 @@ import { AuthStatus, Authenticate } from "../../components/Context/Auth";
 import { setCookie } from "../../AppCookies";
 import { Navigate, useNavigate } from "react-router-dom";
 
-
-const Login = ({ closeModal }) => {
+const LoginPage = ({ login }) => {
 
     const navigate = useNavigate();
     const authentication = useContext(Authenticate); // gets the result of user authentication and assign it to auth context
@@ -25,6 +24,7 @@ const Login = ({ closeModal }) => {
             const result = await signInWithPopup(auth, g_provider);
             const REF_TOKEN = result.user.refreshToken; // useful to re-authenticate the user
             console.log(result);
+            login(false);
             setCookie("auth-token", REF_TOKEN);
             navigate("/");
         } catch (error) {
@@ -38,9 +38,11 @@ const Login = ({ closeModal }) => {
 
     useEffect(() => {
         if (authResult) {
+            login(true);
             <Navigate to="/" />
         }
         else {
+            login(false);
             <Navigate to="/login" />
         }
     }, [authResult]);
@@ -49,35 +51,28 @@ const Login = ({ closeModal }) => {
     //if user is previously login, then redirect the user to Home
     if (authResult) {
         return <Navigate to="/" />
-    }
-    else {
-        //return this if the user is authenticated
+    } else {
         return (
-            <Backdrop>
-                <motion.div className="login-form" initial={{ scale: 0, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ delay: 0.3 }} exit={{ opacity: 0, scale: 0 }}>
-                    <CloseButton top="-10px" right="-12px" action={closeModal} />
-                    <header>
-                        <Brand name="Pengeako" />
-                        <p>Unleash your taste buds' wildest desires</p>
-                    </header>
-                    <form className="login" method="POST" action="#" autoComplete="off" id="login">
-                        <LineField label="Email" type="text" id={"email-field"} placeholder={"."} icon="fa-solid fa-user" />
-                        <LineField label="Password" type="password" id={"password-field"} placeholder={"."} icon="fa-solid fa-key" />
-                        <AppButton label="Login" icon="fa-solid fa-arrow-right-to-bracket" width="85%" />
-                    </form>
-                    <div className="or-container">
-                        <span>or continue with</span>
-                        <hr />
+            <div className="login-page">
+                <div className="content">
+                    <div className="left">
+                        <img src={"https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/logo.png?alt=media&token=70c25072-3774-4cb3-b5de-4796741a8358"} />
                     </div>
-                    <div className="emailAuth">
-                        <AppButton label="Google Account" icon="fa-brands fa-google" color="var(--text)" width="65%" clickAction={handleSignInWithGoogle} />
-                        <AppButton label="Facebook Account" icon="fa-brands fa-square-facebook" color="var(--text)" width="65%" clickAction={handleSignInWithFacebook} />
+                    <div className="right">
+                        <h1>Login with</h1>
+                        <div className="email-providers">
+                            <AppButton clickAction={handleSignInWithGoogle} label={"Google Account"} icon={"fa-brands fa-google"} width={"300px"} color={"var(--text)"} />
+                            <AppButton clickAction={handleSignInWithFacebook} label={"Yahoo Account"} icon={"fa-brands fa-yahoo"} width={"300px"} color={"var(--text)"} />
+                            <AppButton label={"Twitter Account"} icon={"fa-brands fa-twitter"} width={"300px"} color={"var(--text)"} />
+                            <AppButton label={"Microsoft Account"} icon={"fa-brands fa-microsoft"} width={"300px"} color={"var(--text)"} />
+                            <AppButton label={"Facebook Account"} icon={"fa-brands fa-facebook"} width={"300px"} color={"var(--text)"} />
+                        </div>
                     </div>
-                    <p className="footer"><a>Create an account</a> and delight in a plethora of promotions <br />and discounts exclusively offered by us.</p>
-                </motion.div>
-            </Backdrop>
-        )
+                </div>
+            </div>
+        );
     }
+
 }
 
-export default Login;
+export default LoginPage;

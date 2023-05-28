@@ -3,9 +3,7 @@ import './cart.css';
 import QuantityField from '../../components/QuantityField/quantityField';
 import PaymentMethod from '../../components/PaymentMethod/paymentMethod';
 import CheckOutModal from '../../components/CheckOut/checkOut';
-import Backdrop from '../../components/Backdrop/backdrop'; import { useContext } from "react";
-import { ModifyCart } from "../../components/Context/Shopper";
-
+import Backdrop from '../../components/Backdrop/backdrop';
 
 const Cart = ({ totalItems }) => {
     const [showModal, setShowModal] = useState(false);
