@@ -2,10 +2,14 @@ import UserBtn from "../UserButton/userBtn";
 import "./userPanel.css";
 import FloatingNav from "../FloatingNav/floatingNav";
 import Backdrop from "../Backdrop/backdrop";
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { UserCart } from "../Context/Shopper";
 
 const UserPanel = () => {
+  const cart = useContext(UserCart);
+  const [panelCart, setPanelCart] = useState([]);
+
   const navigate = useNavigate();
   const [isFloatingNavOpen, setIsFloatingNavOpen] = useState(false);
   const floatingNavRef = useRef(null);
@@ -21,6 +25,10 @@ const UserPanel = () => {
   const handleClick = (route) => {
     navigate(`/${route}`);
   };
+
+  useEffect(() => {
+    setPanelCart(...cart);
+  }, [cart]);
 
   useEffect(() => {
     const handleDocumentClick = (e) => {
@@ -47,7 +55,7 @@ const UserPanel = () => {
   return (
     <div className="user-panel-container">
       <div className="left">
-        <UserBtn iconName={"shopping_cart"} count={797} action={() => handleClick('cart')} />
+        <UserBtn iconName={"shopping_cart"} count={panelCart.length} action={() => handleClick('cart')} />
         <UserBtn iconName={"chat_bubble"} count={797} />
         <UserBtn iconName={"notifications"} count={797} />
       </div>

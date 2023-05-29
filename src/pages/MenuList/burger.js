@@ -47,5 +47,3 @@ const Burger = () => {
 }
 
 export default Burger;
-
-export default Burger;

@@ -8,15 +8,12 @@ export const UserCart = React.createContext();
 export const ModifyCart = React.createContext();
 export const CartInfo = React.createContext();
 export const UserFavorites = React.createContext();
+export const CartItemQuantity = React.createContext();
 
 const Shopper = ({ children }) => {
 
     //saves the cart values inside the database
     const SaveCart = () => {
-
-    }
-
-    const getTotalItems = () => {
 
     }
 
@@ -28,6 +25,16 @@ const Shopper = ({ children }) => {
     // set or modifies the cart values
     // holds all the items/products that the user added in the cart
     const [cart, setCart] = useState([]);
+
+    const getTotalItems = () => {
+        const total_qty = 0;
+
+        cart.forEach(item => {
+            total_qty += item.quantity;
+        })
+
+        return total_qty;
+    }
 
     return (
         <UserFavorites.Provider>
