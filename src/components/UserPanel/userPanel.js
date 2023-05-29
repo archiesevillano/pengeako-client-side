@@ -20,7 +20,6 @@ const UserPanel = () => {
 
   const handleClick = (route) => {
     navigate(`/${route}`);
-    closeFloatNav();
   };
 
   useEffect(() => {
@@ -41,8 +40,9 @@ const UserPanel = () => {
     };
   }, []);
 
-
- 
+  useEffect(() => {
+    closeFloatNav(); // Close the floating navigation menu when the component mounts or updates
+  }, [navigate]);
 
   return (
     <div className="user-panel-container">
@@ -52,7 +52,7 @@ const UserPanel = () => {
         <UserBtn iconName={"notifications"} count={797} />
       </div>
       <div className="right">
-        <a  onClick={toggleFloatingNav}>
+        <a onClick={toggleFloatingNav}>
           <img
             src="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fuser_placeholder.png?alt=media&token=830ea0d8-bbf9-4a68-b552-a6f6e313e6b1"
             alt="User"
@@ -60,13 +60,11 @@ const UserPanel = () => {
           <span>User123</span>
         </a>
         {isFloatingNavOpen && (
-        <div ref={floatingNavRef}>
-          <FloatingNav closeFloatNav={closeFloatNav} />
-        </div>
-      )}
+          <div ref={floatingNavRef}>
+            <FloatingNav closeFloatNav={closeFloatNav} />
+          </div>
+        )}
       </div>
-
-      
     </div>
   );
 }

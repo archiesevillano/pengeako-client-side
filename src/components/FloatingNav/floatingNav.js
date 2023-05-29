@@ -3,7 +3,7 @@ import './floatingNav.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { removeCookie } from '../../AppCookies';
 
-const FloatingNav = ({ image }) => {
+const FloatingNav = ({ image, logout }) => {
   const navigate = useNavigate();
   const fileInputRef = useRef(null);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -26,6 +26,8 @@ const FloatingNav = ({ image }) => {
   const handleLogout = () => {
     // Remove 'auth-token' from the cookie section for clean up
     removeCookie('auth-token');
+    logout(true);
+    navigate("/");
   };
 
   const handleClickOutside = (event) => {
@@ -47,8 +49,18 @@ const FloatingNav = ({ image }) => {
         <div className="profile-section">
           <div className="top">
             <div className="user-image">
-              <img src={selectedImage ? URL.createObjectURL(selectedImage) : image} />
-              <button type="button" className="update-image-btn" onClick={() => fileInputRef.current.click()}>
+              {selectedImage ? (
+                <img src={URL.createObjectURL(selectedImage)} alt="User" />
+              ) : (
+                <div className="placeholder-image">
+                  <img src='https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fuser_placeholder.png?alt=media&token=830ea0d8-bbf9-4a68-b552-a6f6e313e6b1' alt='User Image'/>
+                </div>
+              )}
+              <button
+                type="button"
+                className="update-image-btn"
+                onClick={() => fileInputRef.current.click()}
+              >
                 <span className="material-symbols-outlined">add_a_photo</span>
                 <input
                   type="file"
@@ -65,7 +77,11 @@ const FloatingNav = ({ image }) => {
             </div>
           </div>
           <div className="bottom">
-            <button type="button" className="account-settings-btn" onClick={() => handleClick('manage-account')}>
+            <button
+              type="button"
+              className="account-settings-btn"
+              onClick={() => handleClick('manage-account')}
+            >
               Manage Account
             </button>
           </div>
@@ -89,13 +105,13 @@ const FloatingNav = ({ image }) => {
       </div>
       <ul className="floating-links">
         <li>
-          <Link to="/profile/my-favorites">
+          <Link to="/profile/favorites">
             <span className="material-symbols-outlined"></span>
             My Favorites
           </Link>
         </li>
         <li>
-          <Link to="/profile/my-ratings">
+          <Link to="/profile/ratings">
             <span className="material-symbols-outlined"></span>
             My Ratings
           </Link>
