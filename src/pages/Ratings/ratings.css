@@ -5,6 +5,10 @@
 
 .ratings-section h1 {
     font-family: var(--button);
+    
+    
+    color: var(--quaternary);
+    
 }
 
 .ratings-section .contents {

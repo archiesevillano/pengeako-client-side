@@ -32,9 +32,9 @@ const Burger = () => {
 
     return (
         <div className="burger-list">
-            {list.map((item) => (
+            {list.map((item,index) => (
                 <MenuCard
-                    
+                    key={index + 1}
                     id={item.productID}
                     image={item.image}
                     title={item.productName}

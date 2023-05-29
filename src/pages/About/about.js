@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import PictureCard from '../../components/pictureCards/pictureCards';
 import EmailSubscriptions from '../../components/emailSubscriptions/emailSubscriptions';
-import './about.css'
+import './about.css';
+import RatingsCard from '../../components/Ratings/ratingsCard';
 
 
 
@@ -72,17 +73,17 @@ const About = () => {
           <div>
             <PictureCard
               image="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fpeople%2Fchef1.jpg?alt=media&token=44081cdb-aed0-43ef-93dc-ac67d315b9ae"
-              name="Jackie Chan" />
+              name="Stephen Wu" />
           </div>
           <div>
             <PictureCard
               image="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fpeople%2Fcheftwo.jpg?alt=media&token=361688bc-271e-48a5-aace-2a855dd82dff"
-              name="Mark SuckerBarg" />
+              name="Mark Smith" />
           </div>
           <div>
             <PictureCard
               image="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fpeople%2Fcheffour.jpg?alt=media&token=82d940a7-0030-479f-a960-bb39ccd0dcac"
-              name="Chef Boy" />
+              name="Salvador Cueva" />
           </div>
         </div>
         <div className='email-subscriptions-container'>
@@ -91,6 +92,7 @@ const About = () => {
           </div>
           <div className='email-form-container'>
             <EmailSubscriptions />
+           
           </div>
         </div>
       </div>

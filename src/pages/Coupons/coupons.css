@@ -1,5 +1,9 @@
 .coupon-page {
     padding: 30px;
+    font-family: var(--button);
+    
+    
+    color: var(--quaternary);
 }
 
 .coupon-page h1 {

@@ -33,11 +33,12 @@ const ManageAccount = () => {
 
   return (
     <div className="manage-account">
-      <div className="data-row">
         <h1>Manage Account Information</h1>
+      <div className="data-row">
+        
         <div className="info-container">
           <form className={`user-name-section ${editableName ? 'editable' : 'read-only'}`}>
-            <h2 className="form-heading">Fullname</h2>
+            <h2 className="form-heading"></h2>
             <div className="form-contents">
               <div className="field-group">
                 <div className="input-row">

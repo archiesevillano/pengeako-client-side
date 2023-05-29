@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Backdrop from '../Backdrop/backdrop';
 
+
 const CheckOutModal = ({ closeModal, orderDetails, handlePaymentMethod }) => {
   const [showConfirmation, setShowConfirmation] = useState(false);
   const navigate = useNavigate();
@@ -71,6 +72,7 @@ const CheckOutModal = ({ closeModal, orderDetails, handlePaymentMethod }) => {
             </div>
             <div className="checkout-btn-container">
               <AppButton className="submit-checkout-btn"  label={'Place Order'} clickAction={handleSubmit}/>
+              
             </div>
           </div>
         </div>  

@@ -6,6 +6,7 @@ import "./home.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect, useRef } from 'react';
 
+
 const Home = () => {
     const navigate = useNavigate();
     const homePage = document.querySelector(".homepage");
@@ -139,6 +140,7 @@ const Home = () => {
 
             </div>
             <PageFooter />
+            
         </div>
     );
 }

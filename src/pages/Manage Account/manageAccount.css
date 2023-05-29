@@ -1,14 +1,33 @@
 .manage-account {
     width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    font-family: var(--button);
+    margin-left: 40px;
+    color: var(--quaternary);
+    padding: 20px 0;
+    
+    
   }
-  
+  .manage-account h1 {
+    display:flex;
+    justify-content: flex-start;
+    font-family: var(--button);
+   
+    color: var(--quaternary);
+    
+  }
   .data-row {
     width: 500px;
     padding: 20px;
     border: 1px solid #d1d1d1;
     border-radius: 10px;
+    margin: 50px 0;
+    display:flex;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 20px;
+
   }
   
   .form-heading {
