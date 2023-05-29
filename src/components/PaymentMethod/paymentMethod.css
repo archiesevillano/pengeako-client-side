@@ -26,6 +26,7 @@
     background-color: rgba(167, 167, 167, 0.342);
     margin-top: 3px;
     margin-bottom: 5px;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
 .payment-select label {
     font-size: 18px;
@@ -60,3 +61,13 @@
   58px 62px 80px rgba(0, 0, 0, 0.07)
 ;
 }
+.transition-container {
+    opacity: 0;
+    height: 0;
+    transition: opacity 0.3s, height 0.3s;
+  }
+  
+  .transition-container.show {
+    opacity: 1;
+    height: auto;
+  }

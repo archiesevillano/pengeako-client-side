@@ -10,10 +10,8 @@ const PaymentMethod = ({ handlePaymentMethod }) => {
   const handleMethodClick = (method) => {
     if (selectedMethod === method) {
       setSelectedMethod('');
-      handlePaymentMethod('');
     } else {
       setSelectedMethod(method);
-      handlePaymentMethod(method);
     }
   };
 
@@ -34,12 +32,12 @@ const PaymentMethod = ({ handlePaymentMethod }) => {
         </div>
 
         <input
-          type="radio"
-          id="cash-on-delivery"
-          name="payment-method"
-          value="cash-on-delivery"
-          checked={selectedMethod === 'cash-on-delivery'}
-          onChange={() => {}}
+        type="radio"
+        id="cash-on-delivery"
+        name="payment-method"
+        value="cash-on-delivery"
+        checked={selectedMethod === 'cash-on-delivery'}
+        onChange={() => {}}
         />
       </div>
       <div
@@ -53,12 +51,12 @@ const PaymentMethod = ({ handlePaymentMethod }) => {
           <label htmlFor="gcash">GCash</label>
         </div>
         <input
-          type="radio"
-          id="gcash"
-          name="payment-method"
-          value="gcash"
-          checked={selectedMethod === 'gcash'}
-          onChange={() => {}}
+        type="radio"
+        id="gcash"
+        name="payment-method"
+        value="gcash"
+        checked={selectedMethod === 'gcash'}
+        onChange={() => {}}
         />
       </div>
       <div
@@ -72,21 +70,25 @@ const PaymentMethod = ({ handlePaymentMethod }) => {
           <label htmlFor="debit-credit-card">Debit/Credit Card</label>
         </div>
         <input
-          type="radio"
-          id="debit-credit-card"
-          name="payment-method"
-          value="debit-credit-card"
-          checked={selectedMethod === 'debit-credit-card'}
-          onChange={() => {}}
+        type="radio"
+        id="debit-credit-card"
+        name="payment-method"
+        value="debit-credit-card"
+        checked={selectedMethod === 'debit-credit-card'}
+        onChange={() => {}}
         />
       </div>
-      {selectedMethod === 'gcash' && <GCash />}
-      {selectedMethod === 'debit-credit-card' && (
-        <div>
-          <DebitCreditCard />
-          <CardIcon cardType={selectedMethod} />
-        </div>
-      )}
+      {selectedMethod === 'gcash' && (
+  <div className={`transition-container ${selectedMethod === 'gcash' ? 'show' : ''}`}>
+    <GCash />
+  </div>
+)}
+{selectedMethod === 'debit-credit-card' && (
+  <div className={`transition-container ${selectedMethod === 'debit-credit-card' ? 'show' : ''}`}>
+    <DebitCreditCard />
+    <CardIcon cardType={selectedMethod} />
+  </div>
+)}
     </div>
   );
 };
