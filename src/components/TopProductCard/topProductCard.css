@@ -50,6 +50,8 @@
     text-transform: capitalize;
     font-family: var(--button);
     color: var(--text);
+    
+    
 }
 
 .top-product-card .card-para {
@@ -73,4 +75,9 @@
     object-fit: cover;
     position: absolute;
     z-index: -1;
+}
+.card-content p{
+    text-shadow: 50px 10px 17px var(--last) ;
+    font-family: var(--button);
+    font-weight: 500;
 }

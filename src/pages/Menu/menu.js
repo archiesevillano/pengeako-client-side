@@ -25,9 +25,16 @@ const Menu = () => {
                 </div>
             </div>
             <div className="top-products-section">
-                <TopProductCard image="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2F1074058.jpg?alt=media&token=fa67d0a8-8973-455b-b4cd-becf313109e9" />
-                <TopProductCard image="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fbackgrounds%20or%20ads%2F1.jpg?alt=media&token=40f350c3-dea9-4c67-86ab-e3c9462c1679" />
-                <TopProductCard image="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fbackgrounds%20or%20ads%2Fw.jpg?alt=media&token=6b5920fa-b6fc-4cc1-95bd-766b20573360" />
+                <TopProductCard image="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2F1074058.jpg?alt=media&token=fa67d0a8-8973-455b-b4cd-becf313109e9" 
+                title={'50% Off for Pizza'}
+                cardpara={'WEEKENDS OFFER ONLY'}/>
+                <TopProductCard image="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fbackgrounds%20or%20ads%2F1.jpg?alt=media&token=40f350c3-dea9-4c67-86ab-e3c9462c1679" 
+                
+                title={"Here's the Scoop!"}
+                cardpara={'Ice Cream Special'}/>
+                <TopProductCard image="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fbackgrounds%20or%20ads%2Fw.jpg?alt=media&token=6b5920fa-b6fc-4cc1-95bd-766b20573360" 
+                title={"Burger Day!"}
+                cardpara={'Free CurlyFries every Fridays'}/>
             </div>
 
             <div className="menu-list">
