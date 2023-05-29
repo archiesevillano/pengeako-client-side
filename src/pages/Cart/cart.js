@@ -46,20 +46,9 @@ const Cart = ({ totalItems }) => {
                         </tbody>
                     </table>
                     <div className="order-comp">
-                        <div className="sub-total-section row">
-                            <b>Subtotal:</b>
-                            <span>₱1,019.98</span>
-                        </div>
-                        <div className="coupon-section row">
-                            <b>Coupon Code: </b>
-                            <a>Add Coupon</a>
-                        </div>
-                        <div className="grand-total row">
-                            <b>Grand Total: </b>
-                            <span>₱1,019.98</span>
-                        </div>
+                        
                         <div className="checkout-box">
-                            <p>Your Order is now ready to check out</p>
+                            <p>Click here to proceed to check out</p>
                             <hr />
                             <button className="place-order-btn" onClick={handleCheckout}>
                                 Check out

@@ -70,7 +70,8 @@
 }
  .carticons-container {
    display: flex;
-   align-self: flex-end;
+   align-self: flex-start;
+   
    
 }
 .menucard-icons button {
@@ -81,6 +82,8 @@
     background-color: unset;
     cursor: pointer;
     transition: all 0.3s;
+    display:flex;
+    
   }
   
   .menucard-icons button:hover {

@@ -108,7 +108,7 @@
     flex-direction: column;
     gap: 20px;
     width: 350px;
-    height: 280px;
+    height: 150px;
     padding: 20px;
     border-radius: 10px;
     border: 1px solid #d1d1d1;
@@ -143,7 +143,8 @@
 }
 
 .order-comp .checkout-box hr {
-    border: 2px solid #63b96a;
+    border: 2px solid var(--secondary
+    );
     width: 100px;
     text-align: right;
     margin: 10px 0;

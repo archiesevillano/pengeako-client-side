@@ -8,13 +8,13 @@ import { useNavigate } from 'react-router-dom';
 import Backdrop from '../Backdrop/backdrop';
 
 
-const CheckOutModal = ({ closeModal, orderDetails, handlePaymentMethod }) => {
+const CheckOutModal = ({ closeModal, orderDetails, handlePaymentMethod,subTotal , Coupon ,totalAmount, orderSummary}) => {
   const [showConfirmation, setShowConfirmation] = useState(false);
   const navigate = useNavigate();
   const modalContentRef = useRef();
 
   const handleSubmit = () => {
-    // Handle submit logic here
+    // Handle submit logic here/ Dito boi ? andito loading ko e. 
     setShowConfirmation(true);
 
     setTimeout(() => {
@@ -55,9 +55,21 @@ const CheckOutModal = ({ closeModal, orderDetails, handlePaymentMethod }) => {
               <div className='orderdetails-txt'>
               <h2>Order Details:</h2>
               </div>
-              <div>
-                {/* Display order details */}
-              <p>{orderDetails}</p>
+              <div className='ordersummary-container'>
+              <p>{orderSummary}</p>
+                <div className="sub-total-section row">
+                              <b>Subtotal:</b>
+                              <span>{subTotal}P123123</span>
+                          </div>
+                          <div className="coupon-section row">
+                              <b>Coupon Code: l</b>
+                              <a>{Coupon}Angkas</a>
+                          </div>
+                          <div className="grand-total row">
+                              <b>Grand Total: </b>
+                              <span>{totalAmount}P131323</span>
+                          </div>
+                
               </div>
               
             </div>
