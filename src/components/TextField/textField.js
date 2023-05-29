@@ -25,7 +25,8 @@ const TextField = ({ placeHolder, width, id, action, type, pattern, defaultValue
         value={value}
         onChange={handleInputs}
         pattern={pattern}
-        title="Firstname can only contain letters."
+        
+        style={{ width: width || "auto" }}
       />
     </div>
   );

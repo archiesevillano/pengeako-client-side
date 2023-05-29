@@ -1,119 +1,58 @@
 .manage-account {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-}
-
-.form-heading {
+    justify-content: center;
+  }
+  
+  .data-row {
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #d1d1d1;
+    border-radius: 10px;
+  }
+  
+  .form-heading {
     font-family: var(--button);
     color: var(--quaternary);
     margin: 15px 0;
-}
-
-.manage-account .info-container {
-    width: 100%;
-    padding: 20px 40px;
+  }
+  
+  .info-container {
     display: flex;
-    justify-content: flex-start;
-    align-items: baseline;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.manage-account .info-container form {
-    padding: 30px;
-    border: 1px solid #d1d1d1;
-    border-radius: 10px;
-    width: 45%;
-    flex-shrink: 0;
-}
-
-.manage-account .info-container form .form-contents {
-    display: flex;
-    gap: 20px;
-}
-
-.manage-account .info-container form .form-contents .reminder {
-    padding: 20px;
-    margin: 10px;
-    border: 1px solid #d3d3d3;
-    background: #ebebeb;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
-    font-family: var(--button);
-    font-size: 14px;
+  }
+  
+  .form-contents {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .field-group {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
-    border-radius: 10px;
-    width: 40%;
-}
-
-.manage-account .info-container form .form-contents span {
-    font-size: 30px;
-}
-
-.manage-account .info-container form.read-only input[type=text],
-.manage-account .info-container form.read-only input[type=password] {
-    pointer-events: none;
-}
-
-.manage-account .info-container form.read-only .text-field {
-    opacity: 0.7;
-}
-
-.manage-account .info-container form.editable .text-field {
-    opacity: 1;
-}
-
-.manage-account .info-container form.editable input[type=text],
-.manage-account .info-container form.editable input[type=password] {
-    pointer-events: "";
-    opacity: 1;
-}
-
-.manage-account .data-row {
+  }
+  
+  .input-row {
     display: flex;
-    flex-direction: column;
-    padding: 40px;
-    width: 100%;
-}
-
-.manage-account .data-row h1 {
-    font-family: var(--button);
-    margin-left: 40px;
-    color: var(--quaternary);
-}
-
-.manage-account .data-row .text-field {
-    border: 1px solid #dadada;
-}
-
-.manage-account .data-row .input-label {
-    display: block;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .input-label {
     font-family: var(--input);
     font-weight: 500;
-}
-
-.manage-account .data-row .field-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 15px;
-    width: 50%;
-}
-
-.manage-account .info-container form .button-collection {
+    margin-right: 10px;
+  }
+  
+  .button-collection {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    width: 100%;
     margin-top: 10px;
-
-}
-
-.manage-account .info-container form .button-collection button {
+  }
+  
+  .primary-btn,
+  .secondary-btn {
     font-family: var(--button);
     padding: 8px 12px;
     outline: none;
@@ -121,10 +60,11 @@
     cursor: pointer;
     width: 130px;
     margin-right: 10px;
-}
-
-.manage-account .info-container form .button-collection .primary-btn {
+  }
+  
+  .primary-btn {
     background-color: var(--secondary);
     color: var(--text);
     border: none;
-}
+  }
+  

@@ -34,6 +34,7 @@ const Burger = () => {
         <div className="burger-list">
             {list.map((item) => (
                 <MenuCard
+                    
                     id={item.productID}
                     image={item.image}
                     title={item.productName}

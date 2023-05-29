@@ -24,7 +24,7 @@
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   height: 600px;
-  width: 700px;
+  width: 900px;
   margin: auto;
   display:flex;
   justify-content: space-around;
@@ -33,9 +33,12 @@
 
 .checkouthead-container {
   display: flex;
-  justify-content: space-between;
+ width: 350px;
+  flex-direction: column;
 }
-
+.orderdetails-txt {
+  margin-top: 20px;;
+}
 .checkout-clsbtn {
   position: relative;
   bottom: 33px;
