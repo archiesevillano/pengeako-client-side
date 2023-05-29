@@ -2,6 +2,7 @@ import "./menudata.css";
 import React, { useState, useEffect } from 'react';
 import { collection, getFirestore, addDoc, doc, getDoc, where, query, getDocs, setDoc, deleteDoc } from "firebase/firestore";
 import { app } from "../../configs/frb";
+import MenuCard from "../../components/MenuCard/menuCard";
 
 const Dimsum = () => {
 
@@ -36,7 +37,16 @@ const Dimsum = () => {
 
     return (
         <div className="dimsum-list">
-
+            {list.map((item) => (
+                <MenuCard
+                    id={item.productID}
+                    image={item.image}
+                    title={item.productName}
+                    description={item.description}
+                    price={item.productPrice}
+                    category={item.category}
+                />
+            ))}
         </div>
     )
 }

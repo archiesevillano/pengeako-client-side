@@ -1,10 +1,10 @@
 import "./menudata.css";
-import { collection, getFirestore, addDoc, doc, getDoc, where, query, getDocs, setDoc, deleteDoc } from "firebase/firestore";
+import { collection, getFirestore, getDocs } from "firebase/firestore";
 import { app } from "../../configs/frb";
 import React, { useState, useEffect } from 'react';
+import MenuCard from '../../components/MenuCard/menuCard';
 
 const Burger = () => {
-
     const [list, setList] = useState([]);
     const db = getFirestore(app);
 
@@ -22,23 +22,30 @@ const Burger = () => {
 
             setList(resultList);
         } catch (error) {
-            // Handle any error that occurred during data retrieval
             console.error(error);
         }
-
-        console.log(resultList);
     }
 
     useEffect(() => {
         loadData();
     }, []);
 
-
     return (
         <div className="burger-list">
-
+            {list.map((item) => (
+                <MenuCard
+                    id={item.productID}
+                    image={item.image}
+                    title={item.productName}
+                    description={item.description}
+                    price={item.productPrice}
+                    category={item.category}
+                />
+            ))}
         </div>
     )
 }
+
+export default Burger;
 
 export default Burger;

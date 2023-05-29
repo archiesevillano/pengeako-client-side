@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { collection, getFirestore, addDoc, doc, getDoc, where, query, getDocs, setDoc, deleteDoc } from "firebase/firestore";
 import "./menudata.css";
 import { app } from "../../configs/frb";
+import MenuCard from "../../components/MenuCard/menuCard";
 
 const Fries = () => {
 
@@ -36,7 +37,16 @@ const Fries = () => {
 
     return (
         <div className="fries-list">
-
+            {list.map((item) => (
+                <MenuCard
+                    id={item.productID}
+                    image={item.image}
+                    title={item.productName}
+                    description={item.description}
+                    price={item.productPrice}
+                    category={item.category}
+                />
+            ))}
         </div>
     )
 }
