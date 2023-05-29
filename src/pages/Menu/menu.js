@@ -4,7 +4,7 @@ import "./menu.css";
 import { useState, useRef } from 'react';
 import TicketLabel from "../../components/TicketLabel/ticketLabel";
 import PizzaPlate from "../../components/PizzaPlate/pizzaPlate";
-import { NavLink } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import MenuCard from "../../components/MenuCard/menuCard";
 
 const Menu = () => {
@@ -42,14 +42,7 @@ const Menu = () => {
                 </header>
                 <main className="product-list">
                     <div className="wrapper">
-                        <MenuCard price={149} image={"https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FMENU%2Fburger%2Fpngwing.com%20(4).png?alt=media&token=d78b6990-b75e-49e2-8ccc-5eb48b4eb1a6"} title="Giant Beef Burger" description={"Giant Meaty and Juicy Beef"} />
-                        <MenuCard price={149} image={"https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FMENU%2Fburger%2Fpngwing.com%20(4).png?alt=media&token=d78b6990-b75e-49e2-8ccc-5eb48b4eb1a6"} title="Giant Beef Burger" description={"Giant Meaty and Juicy Beef"} />
-                        <MenuCard price={149} image={"https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FMENU%2Fburger%2Fpngwing.com%20(4).png?alt=media&token=d78b6990-b75e-49e2-8ccc-5eb48b4eb1a6"} title="Giant Beef Burger" description={"Giant Meaty and Juicy Beef"} />
-                        <MenuCard price={149} image={"https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FMENU%2Fburger%2Fpngwing.com%20(4).png?alt=media&token=d78b6990-b75e-49e2-8ccc-5eb48b4eb1a6"} title="Giant Beef Burger" description={"Giant Meaty and Juicy Beef"} />
-                        <MenuCard price={149} image={"https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FMENU%2Fburger%2Fpngwing.com%20(4).png?alt=media&token=d78b6990-b75e-49e2-8ccc-5eb48b4eb1a6"} title="Giant Beef Burger" description={"Giant Meaty and Juicy Beef"} />
-                        <MenuCard price={149} image={"https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FMENU%2Fburger%2Fpngwing.com%20(4).png?alt=media&token=d78b6990-b75e-49e2-8ccc-5eb48b4eb1a6"} title="Giant Beef Burger" description={"Giant Meaty and Juicy Beef"} />
-                        <MenuCard price={149} image={"https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FMENU%2Fburger%2Fpngwing.com%20(4).png?alt=media&token=d78b6990-b75e-49e2-8ccc-5eb48b4eb1a6"} title="Giant Beef Burger" description={"Giant Meaty and Juicy Beef"} />
-
+                        <Outlet />
                     </div>
                 </main>
             </div>
@@ -60,9 +53,34 @@ const Menu = () => {
 
 const getCategories = () => {
 
-    const categories = ["BURGER", "PIZZA", "DIMSUM", "DRINKS", "ICE CREAM", "FRIES"];
+    const categories = [
+        {
+            name: "Burger",
+            path: "burgers",
+        },
+        {
+            name: "Pizza",
+            path: "pizzas",
+        },
+        {
+            name: "Drinks",
+            path: "drinks",
+        },
+        {
+            name: "Ice Creams",
+            path: "iceCreams",
+        },
+        {
+            name: "Fries",
+            path: "fries",
+        },
+        {
+            name: "Dimsum",
+            path: "dimsum",
+        },
+    ]
 
-    return categories.map((category, index) => <li key={index + 1}><NavLink className={category.toString().toLocaleLowerCase()} to={`/${category}`}>{category}</NavLink></li>);
+    return categories.map((category, index) => <li key={index + 1}><NavLink className={category.path.toString().toLocaleLowerCase()} to={`${category.path}`}>{category.name}</NavLink></li>);
 }
 
 export default Menu;

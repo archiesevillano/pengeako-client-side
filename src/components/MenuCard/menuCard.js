@@ -2,13 +2,13 @@ import { ModifyCart, UserCart, UserFavorites } from "../Context/Shopper";
 import "./menuCard.css";
 import { useState, useContext } from 'react';
 import { idgen } from "../../AppProperties";
+import { addResource } from "../../configs/frb";
 
 const MenuCard = ({ id, image, title, description, price, category }) => {
 
     const cart = useContext(UserCart);
     const setCart = useContext(ModifyCart);
     const favs = useContext(UserFavorites);
-
 
     const item = {
         productID: id,
@@ -27,14 +27,27 @@ const MenuCard = ({ id, image, title, description, price, category }) => {
     }
 
     const handleAdd = () => {
-        cart.forEach(cartItem => {
-            if (cartItem.productID === id) {
-                cartItem.quantity++;
-            }
-            else {
-                cart.push(item);
-            }
-        })
+
+
+        if (cart.length <= 0) {
+            cart.push(item);
+            alert("Added First Image");
+            console.log(cart);
+        }
+        else {
+            cart.forEach(cartItem => {
+                if (cartItem.productID === id) {
+                    alert("Added QTY");
+                    cartItem.quantity++;
+                    console.log(cartItem);
+                }
+                else {
+                    cart.push(item);
+                    alert("Added NEW");
+                    console.log(cart);
+                }
+            })
+        }
     }
 
     const handleAddFavorites = () => {
@@ -60,7 +73,7 @@ const MenuCard = ({ id, image, title, description, price, category }) => {
                         </button>
                     </div>
                     <div className="menucard-icons">
-                        <button>
+                        <button onClick={handleAdd}>
                             <i class="fa-solid fa-cart-plus"></i>
                         </button>
                     </div>

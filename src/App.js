@@ -25,6 +25,12 @@ import About from "./pages/About/about";
 import CareerPage from "./pages/Career/careerPage";
 import ScreenLoader from "./components/ScreenLoader/screenLoader";
 import LoginPage from "./pages/Login/loginPage";
+import Burger from "./pages/MenuList/burger";
+import Drinks from "./pages/MenuList/drinks";
+import IceCream from "./pages/MenuList/iceCream";
+import Fries from "./pages/MenuList/fries";
+import Pizzas from "./pages/MenuList/pizza";
+import Dimsum from "./pages/MenuList/dimsum";
 
 
 
@@ -71,7 +77,14 @@ function App() {
                   <Route exact path="/cart" element={<Cart />} />
                   <Route exact path={`/login`} element={<LoginPage login={showHeader} />} />
                   <Route exact path="/signup" element={<SignUp />} />
-                  <Route exact path="/menu" element={<Menu />} />
+                  <Route exact path="/menu" element={<Menu />}>
+                    <Route exact path="burgers" element={<Burger />} />
+                    <Route exact path="drinks" element={<Drinks />} />
+                    <Route exact path="iceCreams" element={<IceCream />} />
+                    <Route exact path="fries" element={<Fries />} />
+                    <Route exact path="pizzas" element={<Pizzas />} />
+                    <Route exact path="dimsum" element={<Dimsum />} />
+                  </Route>
                   <Route exact path="/contacts" element={<ContactPage />} />
                   <Route exact path="/about" element={<About />} />
                   <Route exact path="/careers" element={<CareerPage />} />

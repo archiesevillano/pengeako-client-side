@@ -21,7 +21,6 @@ const AppHeader = () => {
     const [scrolled, setScrolled] = useState(false);
 
     const scrolledState = () => {
-        console.log(window.scrollY);
         if (window.scrollY >= 100) {
             setScrolled(true);
         } else {

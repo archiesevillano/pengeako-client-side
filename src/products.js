@@ -1,4 +1,4 @@
-const burger = [
+export const burger = [
     {
         id: "",
         productName: "Classic Beef Burger",
@@ -81,7 +81,7 @@ const burger = [
     }
 ];
 
-const dimsum = [
+export const dimsum = [
     {
         id: "",
         productName: "Shrimp Dumplings",
@@ -140,7 +140,7 @@ const dimsum = [
     },
 ];
 
-const fries = [
+export const fries = [
     {
         id: "",
         productName: "Classic Fries",
@@ -191,7 +191,7 @@ const fries = [
     }
 ];
 
-const iceCreams = [
+export const iceCreams = [
     {
         id: "",
         productName: "Vanilla Ice Cream",
@@ -274,7 +274,7 @@ const iceCreams = [
     }
 ];
 
-const pizzas = [
+export const pizzas = [
     {
         id: "",
         productName: "Margherita Pizza",

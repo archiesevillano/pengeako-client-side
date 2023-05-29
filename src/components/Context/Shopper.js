@@ -16,6 +16,10 @@ const Shopper = ({ children }) => {
 
     }
 
+    const getTotalItems = () => {
+
+    }
+
     const config = {
         id: idgen(),
         timestamp: tStamp(),
