@@ -1,7 +1,7 @@
 .menu-card {
     position: relative;
-    height: 140px;
-    width: 220px;
+    height: 150px;
+    width: 250px;
     border-radius: 30px;
     background: #e0e0e0;
     box-shadow: 15px 15px 30px #bebebe,
@@ -17,8 +17,9 @@
     height: 130px;
     object-fit: contain;
     position: absolute;
-    top: 0;
+    top: 5;
     left: 50%;
+    
     transform: translate(-50%, -50%);
     transition: all 0.2s ease-in-out;
 }
@@ -44,6 +45,8 @@
 .menu-card .product-details p:first-child {
     font-family: var(--tag);
     letter-spacing: 1px;
+    background: #e0e0e0;
+    background-size: 10px;
 }
 
 .menu-card .product-details p:nth-child(2) {
@@ -86,4 +89,10 @@
   
   .menucard-icons button:active {
     transform: scale(0.9);
+  }
+  .product-details {
+    padding: 10px;
+    z-index: 1;
+    position: relative;
+    top:20px
   }

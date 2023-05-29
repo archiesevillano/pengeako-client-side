@@ -15,6 +15,7 @@
   animation-name: modalFadeIn;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
+  z-index: 9999;
 }
 
 .modal-content-checkout {

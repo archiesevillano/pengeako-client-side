@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import CardIcon from '../visaMasterCard/visaMasterCard';
 import './debitCreditCard.css';
+import AppButton from '../AppButton/appButton';
 
 const DebitCreditCard = () => {
   const [cardNumber, setCardNumber] = useState('');
@@ -25,33 +25,16 @@ const DebitCreditCard = () => {
     const mastercardPattern = /^5[1-5][0-9]{14}$/;
 
     if (visaPattern.test(number)) {
-      setCardType('visa');
+      setCardType('Visa');
     } else if (mastercardPattern.test(number)) {
-      setCardType('mastercard');
+      setCardType('Mastercard');
     } else {
       setCardType('');
     }
   };
 
-  const handleCvvChange = (e) => {
-    const formattedCvv = formatCvv(e.target.value);
-    setCvv(formattedCvv);
-  };
-
-  const formatCvv = (cvv) => {
-    const cleanedCvv = cvv.replace(/\D/g, '');
-    return cleanedCvv;
-  };
-
-  const handleExpirationDateChange = (e) => {
-    const formattedExpirationDate = formatExpirationDate(e.target.value);
-    setExpirationDate(formattedExpirationDate);
-  };
-
-  const formatExpirationDate = (expirationDate) => {
-    const cleanedExpirationDate = expirationDate.replace(/\D/g, '');
-    const formattedExpirationDate = cleanedExpirationDate.replace(/(\d{2})(?=\d)/g, '$1/');
-    return formattedExpirationDate;
+  const handleConfirmClick = () => {
+    // Handle confirm click event
   };
 
   return (
@@ -77,7 +60,7 @@ const DebitCreditCard = () => {
             id="cvv"
             name="cvv"
             value={cvv}
-            onChange={handleCvvChange}
+            onChange={(e) => setCvv(e.target.value)}
             maxLength="3"
             required
           />
@@ -90,16 +73,17 @@ const DebitCreditCard = () => {
             id="expirationDate"
             name="expirationDate"
             value={expirationDate}
-            onChange={handleExpirationDateChange}
+            onChange={(e) => setExpirationDate(e.target.value)}
             maxLength="5"
             required
           />
         </div>
-        {cardType && (
-  <div>
-    <CardIcon cardType={cardType} />
-  </div>
-)}
+      </div>
+      <div className="paymentbtn-container">
+        <AppButton label={'Confirm'} action={handleConfirmClick} />
+        <div className="visa-masterCard">
+          {cardType && <p>{cardType}</p>}
+        </div>
       </div>
     </>
   );

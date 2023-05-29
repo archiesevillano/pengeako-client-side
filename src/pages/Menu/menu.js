@@ -16,7 +16,7 @@ const Menu = () => {
                     <TicketLabel label="Special Offer" />
                     <h1>Get 10% to our Pizzas</h1>
                     <p>Valid from May 29 - June 10</p>
-                    <div className="pizza-list">
+                    <div className="pizza-lists">
                         <PizzaPlate price="599.00" image={"https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FMENU%2FYummyTommyFour.png?alt=media&token=e1753efc-7546-4c00-a2d9-ed1f8e717ea5"} />
                         <PizzaPlate price="669.00" image={"https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FMENU%2FYummyTommyOne.png?alt=media&token=e6afb9f8-1ea0-4f5a-acaf-f2e8791d5d37"} />
                         <PizzaPlate price="449.00" image={"https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FMENU%2FYummyTommyThree.png?alt=media&token=c97319c0-0c2b-4f44-96af-dbbde4ad6d91"} />

@@ -27,7 +27,9 @@ const UserPanel = () => {
   };
 
   useEffect(() => {
-    setPanelCart(...cart);
+    if (cart) {
+      setPanelCart([...cart]);
+    }
   }, [cart]);
 
   useEffect(() => {

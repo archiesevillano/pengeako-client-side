@@ -1,3 +1,4 @@
+
 .card-input-container div {
     display:flex;
     flex-direction: column;
@@ -15,3 +16,8 @@
 .cvv-container input, .expi-container input{
     width: 130px;
 }
+.paymentbtn-container  {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+  }

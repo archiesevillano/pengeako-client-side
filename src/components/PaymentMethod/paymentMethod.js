@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import GCash from '../Gcash/gCash';
 import DebitCreditCard from '../DebitCreditCard/debitCreditCard';
 import './paymentMethod.css';
-import CardIcon from '../visaMasterCard/visaMasterCard';
+
 
 const PaymentMethod = ({ handlePaymentMethod }) => {
   const [selectedMethod, setSelectedMethod] = useState('');
@@ -19,12 +19,14 @@ const PaymentMethod = ({ handlePaymentMethod }) => {
     <div className="payment-method">
       <h2>Payment Method:</h2>
       <div
-        className={`payment-select ${selectedMethod === 'cash-on-delivery' ? 'selected' : ''}`}
+        className={`payment-select ${
+          selectedMethod === 'cash-on-delivery' ? 'selected' : ''
+        }`}
         onClick={() => handleMethodClick('cash-on-delivery')}
       >
         <div className="paymentTitle-container">
           <div className="payment-icons">
-            <img src="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fpngwing.com%20(36).png?alt=media&token=3740c195-40f9-4c97-8bc3-df2a49b662ae" />
+            <img src="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2Fpngwing.com%20(36).png?alt=media&token=3740c195-40f9-4c97-8bc3-df2a49b662ae" alt="cash-on-delivery" />
           </div>
           <div>
             <label htmlFor="cash-on-delivery">Cash on Delivery</label>
@@ -32,12 +34,12 @@ const PaymentMethod = ({ handlePaymentMethod }) => {
         </div>
 
         <input
-        type="radio"
-        id="cash-on-delivery"
-        name="payment-method"
-        value="cash-on-delivery"
-        checked={selectedMethod === 'cash-on-delivery'}
-        onChange={() => {}}
+          type="radio"
+          id="cash-on-delivery"
+          name="payment-method"
+          value="cash-on-delivery"
+          checked={selectedMethod === 'cash-on-delivery'}
+          onChange={() => {}}
         />
       </div>
       <div
@@ -46,49 +48,59 @@ const PaymentMethod = ({ handlePaymentMethod }) => {
       >
         <div className="paymentTitle-container">
           <div className="payment-icons">
-            <img src="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FGCash.png?alt=media&token=02fe19b9-92de-4b6c-8824-45d27fcc7ce9" />
+            <img src="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FGCash.png?alt=media&token=02fe19b9-92de-4b6c-8824-45d27fcc7ce9" alt="gcash" />
           </div>
           <label htmlFor="gcash">GCash</label>
         </div>
         <input
-        type="radio"
-        id="gcash"
-        name="payment-method"
-        value="gcash"
-        checked={selectedMethod === 'gcash'}
-        onChange={() => {}}
+          type="radio"
+          id="gcash"
+          name="payment-method"
+          value="gcash"
+          checked={selectedMethod === 'gcash'}
+          onChange={() => {}}
         />
       </div>
       <div
-        className={`payment-select ${selectedMethod === 'debit-credit-card' ? 'selected' : ''}`}
+        className={`payment-select ${
+          selectedMethod === 'debit-credit-card' ? 'selected' : ''
+        }`}
         onClick={() => handleMethodClick('debit-credit-card')}
       >
         <div className="paymentTitle-container">
           <div className="payment-icons">
-            <img src="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FDebitCredit.png?alt=media&token=b56a84a2-c02a-4682-9d00-9ebb9cd2f728" />
+            <img src="https://firebasestorage.googleapis.com/v0/b/pengeako-862f8.appspot.com/o/Images%2FDebitCredit.png?alt=media&token=b56a84a2-c02a-4682-9d00-9ebb9cd2f728" alt="debit-credit-card" />
           </div>
           <label htmlFor="debit-credit-card">Debit/Credit Card</label>
         </div>
         <input
-        type="radio"
-        id="debit-credit-card"
-        name="payment-method"
-        value="debit-credit-card"
-        checked={selectedMethod === 'debit-credit-card'}
-        onChange={() => {}}
+          type="radio"
+          id="debit-credit-card"
+          name="payment-method"
+          value="debit-credit-card"
+          checked={selectedMethod === 'debit-credit-card'}
+          onChange={() => {}}
         />
       </div>
+      <div></div>
+
       {selectedMethod === 'gcash' && (
-  <div className={`transition-container ${selectedMethod === 'gcash' ? 'show' : ''}`}>
-    <GCash />
-  </div>
-)}
-{selectedMethod === 'debit-credit-card' && (
-  <div className={`transition-container ${selectedMethod === 'debit-credit-card' ? 'show' : ''}`}>
-    <DebitCreditCard />
-    <CardIcon cardType={selectedMethod} />
-  </div>
-)}
+        <div
+          className={`transition-container ${selectedMethod === 'gcash' ? 'show' : ''}`}
+        >
+          <GCash />
+        </div>
+      )}
+      {selectedMethod === 'debit-credit-card' && (
+        <div
+          className={`transition-container ${
+            selectedMethod === 'debit-credit-card' ? 'show' : ''
+          }`}
+        >
+          <DebitCreditCard />
+          
+        </div>
+      )}
     </div>
   );
 };

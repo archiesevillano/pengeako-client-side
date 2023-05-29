@@ -1,0 +1,42 @@
+.burger-list,
+.pizza-list,
+.fries-list,
+.drinks-list,
+.dimsum-list,
+.iceCream-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px; /* Adjust the gap value as desired */
+}
+
+.burger-list > div,
+.pizza-list > div,
+.fries-list > div,
+.drinks-list > div,
+.dimsum-list > div,
+.iceCream-list > div {
+  flex: 0 0 calc(25% - 50px); /* Adjust the width calculation to account for the gap */
+}
+
+.burger-list > div:nth-child(4n + 1),
+.burger-list > div:nth-child(4n + 2),
+.burger-list > div:nth-child(4n + 3),
+.pizza-list > div:nth-child(4n + 1),
+.pizza-list > div:nth-child(4n + 2),
+.pizza-list > div:nth-child(4n + 3),
+.fries-list > div:nth-child(4n + 1),
+.fries-list > div:nth-child(4n + 2),
+.fries-list > div:nth-child(4n + 3),
+.drinks-list > div:nth-child(4n + 1),
+.drinks-list > div:nth-child(4n + 2),
+.drinks-list > div:nth-child(4n + 3),
+.dimsum-list > div:nth-child(4n + 1),
+.dimsum-list > div:nth-child(4n + 2),
+.dimsum-list > div:nth-child(4n + 3),
+.iceCream-list > div:nth-child(4n + 1),
+.iceCream-list > div:nth-child(4n + 2),
+.iceCream-list > div:nth-child(4n + 3) {
+  justify-content: space-between;
+}
