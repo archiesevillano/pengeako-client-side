@@ -60,10 +60,12 @@ const CheckOutModal = ({ closeModal, orderDetails, handlePaymentMethod, subTotal
                   <b>Subtotal:</b>
                   <span>{subTotal}</span>
                 </div>
+                
                 <div className="coupon-section">
-                  <b>Coupon Code: </b>
-                  <a>{Coupon}</a>
-                </div>
+                    <b>Coupon Code:</b>
+                    <input type="text" maxLength={6} value={Coupon} />
+                  </div>
+               
                 <hr />
                 <div className="grand-total">
                   <b>Grand Total: </b>

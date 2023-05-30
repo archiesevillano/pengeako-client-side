@@ -117,11 +117,10 @@ body {
   }
   .icecreamImg-container {
     display:flex;
-    
     justify-content: center;
     align-items: center;
     margin: 30px;
-    width:50%;
+    width:45%;
   }
   .icecreamImg-container img{
       width: 100%;

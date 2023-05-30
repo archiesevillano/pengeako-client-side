@@ -70,8 +70,7 @@ const MenuCard = ({ id, image, title, description, price, category }) => {
                     <div className="menucard-icons">
                         <button>
                             <i class="fa-regular fa-heart"></i>
-                            
-                            
+
                         </button>
                     </div>
                     <div className="menucard-icons">

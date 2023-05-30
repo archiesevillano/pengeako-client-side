@@ -71,6 +71,8 @@
  .carticons-container {
    display: flex;
    align-self: flex-start;
+    padding:0 0 5px 0
+   
    
    
 }
@@ -83,6 +85,8 @@
     cursor: pointer;
     transition: all 0.3s;
     display:flex;
+    gap: 2px;
+    align-items: center;
     
   }
   
@@ -99,3 +103,4 @@
     position: relative;
     top:20px
   }
+  

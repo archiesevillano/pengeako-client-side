@@ -1,8 +1,8 @@
 .purchase-history {
     width: 100%;
     padding: 30px 40px;
+    height: auto !important;
 }
-
 .purchase-history h1 {
     font-family: var(--button);
     transform: translateX(130px);
