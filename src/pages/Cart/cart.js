@@ -23,7 +23,11 @@ const Cart = ({ totalItems }) => {
 
     return (
         <div className="cart-page">
-            <header></header>
+            <header className='cart-hero'>
+                <div >
+
+                </div>
+            </header>
             <main>
                 <h1>Your Cart ({totalItems === undefined ? 0 : totalItems} items)</h1>
                 <div className="content">
@@ -61,7 +65,7 @@ const Cart = ({ totalItems }) => {
                 <Backdrop showBg={true} onClick={handleCloseModal}>
                     <CheckOutModal
                         closeModal={handleCloseModal}
-                        orderDetails="Order details go here"
+                        
                         handlePaymentMethod={handlePaymentMethod}
                     />
                 </Backdrop>
